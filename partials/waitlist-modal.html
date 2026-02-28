@@ -1,0 +1,15 @@
+<div class="modal-overlay" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2 class="modal-title">Únete a la lista de espera</h2>
+        <p class="modal-text">Sé el primero en saber cuando SkillBet esté disponible. Te enviaremos una notificación exclusiva.</p>
+        <form hx-post="/api/waitlist" hx-target="#waitlist-success">
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Unirse a la lista</button>
+        </form>
+        <div id="waitlist-success"></div>
+    </div>
+</div>
