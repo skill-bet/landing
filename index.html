@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillBet - Apuestas Deportivas Virtuales</title>
-    <meta name="description" content="Compite con amigos prediciendo resultados de fútbol. Sin dinero real, pura habilidad.">
+    <title>SkillBet — Demuestra tu habilidad prediciendo fútbol</title>
+    <meta name="description" content="Compite con amigos en ligas privadas, predice resultados reales y escala en los rankings. Todo con tokens virtuales. Sin dinero real, sin riesgo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="resources/icon.png">
+    <link rel="apple-touch-icon" href="resources/icon.png">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
 </head>
 <body>
-    <nav class="navbar" hx-boost="true">
+
+    <!-- ══════════════════════════════════════════════
+         Navigation
+    ══════════════════════════════════════════════ -->
+    <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo">
-                <span class="logo-icon">⚽</span>
+                <img src="resources/icon.png" alt="SkillBet" class="logo-icon">
                 <span class="logo-text">SkillBet</span>
             </a>
             <div class="nav-links">
@@ -23,51 +28,41 @@
                 <a href="#how-it-works" class="nav-link">Cómo funciona</a>
                 <a href="#download" class="nav-link">Descargar</a>
             </div>
-            <button class="btn btn-primary" hx-get="/partials/waitlist-modal" hx-target="#modal-container" hx-swap="innerHTML">
-                Unirse a la lista
-            </button>
+            <a href="#download" class="btn btn-primary btn-sm">Descargar App</a>
         </div>
     </nav>
 
+    <!-- ══════════════════════════════════════════════
+         Hero
+    ══════════════════════════════════════════════ -->
     <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="badge">
-                    <span class="badge-dot"></span>
-                    Sin dinero real. Sin riesgo.
-                </div>
-                <h1 class="hero-title">
-                    Demuestra tu <span class="text-gradient">habilidad</span> prediciendo fútbol
-                </h1>
-                <p class="hero-subtitle">
-                    Compite con amigos en ligas privadas, predice resultados reales y escala en los rankings. 
-                    Todo con tokens virtuales.
-                </p>
-                <div class="hero-cta">
-                    <button class="btn btn-primary btn-lg" hx-get="/partials/download-modal" hx-target="#modal-container" hx-swap="innerHTML">
-                        Descargar App
-                    </button>
-                    <a href="#how-it-works" class="btn btn-secondary btn-lg">Ver cómo funciona</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat" hx-get="/partials/animated-counter?count=10000&label=Usuarios activos" hx-trigger="revealed">
-                        <span class="stat-number">0</span>
-                        <span class="stat-label">Usuarios activos</span>
-                    </div>
-                    <div class="stat" hx-get="/partials/animated-counter?count=50000&label=Partidos predichos" hx-trigger="revealed">
-                        <span class="stat-number">0</span>
-                        <span class="stat-label">Partidos predichos</span>
-                    </div>
-                    <div class="stat" hx-get="/partials/animated-counter?count=2500&label=Ligas creadas" hx-trigger="revealed">
-                        <span class="stat-number">0</span>
-                        <span class="stat-label">Ligas creadas</span>
-                    </div>
-                </div>
+        <div class="hero-inner">
+
+            <div class="hero-badge fade-in">
+                <span class="badge-dot"></span>
+                Sin dinero real &middot; Sin riesgo
             </div>
-            <div class="hero-image">
+
+            <h1 class="hero-title fade-in">
+                Demuestra tu <span class="text-gradient">habilidad</span><br>prediciendo fútbol
+            </h1>
+
+            <p class="hero-subtitle fade-in">
+                Compite con amigos en ligas privadas, predice resultados reales y escala en los rankings.
+                Todo con tokens virtuales.
+            </p>
+
+            <div class="hero-cta fade-in">
+                <a href="#download" class="btn btn-primary">Descargar App</a>
+                <a href="#how-it-works" class="btn btn-outline">Ver cómo funciona</a>
+            </div>
+
+            <!-- Phone mockup -->
+            <div class="hero-phone-wrap fade-in">
+                <div class="phone-glow"></div>
                 <div class="phone-mockup">
-                    <div class="phone-screen" hx-get="/partials/app-preview" hx-trigger="load">
-                        <img src="skillbet-screenshot.jpeg" alt="SkillBet App Preview" class="preview-image">
+                    <div class="phone-screen">
+                        <img src="resources/stats.png" alt="Vista previa de la app SkillBet" class="preview-image">
                     </div>
                 </div>
                 <div class="floating-card floating-card-1">
@@ -75,262 +70,343 @@
                     <span>+500 SkillTokens</span>
                 </div>
                 <div class="floating-card floating-card-2">
-                    <span class="win-text">¡Predicción correcta!</span>
+                    <span>¡Predicción correcta!</span>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section id="features" class="features">
+    <!-- ══════════════════════════════════════════════
+         Features — Showcases
+    ══════════════════════════════════════════════ -->
+
+    <!-- Showcase header -->
+    <section id="features" class="showcase-intro">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Todo lo que necesitas para competir</h2>
-                <p class="section-subtitle">Funciones diseñadas para maximizar la emoción sin el riesgo</p>
+            <p class="section-eyebrow fade-in">Descubre la app</p>
+            <h2 class="section-title fade-in">Todo lo que necesitas<br>para competir</h2>
+            <p class="section-subtitle fade-in">Cada función diseñada para que vivas la emoción del fútbol de una forma única.</p>
+        </div>
+    </section>
+
+    <!-- 1. Partidos -->
+    <section class="showcase">
+        <div class="container showcase-row fade-in">
+            <div class="showcase-text">
+                <p class="showcase-eyebrow">Partidos</p>
+                <h3 class="showcase-title">Explora partidos reales de las mejores ligas</h3>
+                <p class="showcase-description">Navega por el calendario, filtra por liga y consulta las cuotas antes de hacer tu predicción. La Liga, Premier League, Serie A y más, todo en un solo lugar.</p>
+                <ul class="showcase-list">
+                    <li>Calendario interactivo por jornada</li>
+                    <li>Cuotas en tiempo real para cada partido</li>
+                    <li>Filtra por liga, estado y fecha</li>
+                </ul>
             </div>
-            <div class="features-grid">
-                <div class="feature-card" hx-get="/partials/feature-detail/leagues" hx-trigger="click" hx-target="#modal-container" hx-swap="innerHTML">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
+            <div class="showcase-phone-wrap">
+                <div class="showcase-phone-glow"></div>
+                <div class="showcase-phone">
+                    <div class="showcase-phone-screen">
+                        <img src="resources/matches.png" alt="Vista de partidos en SkillBet" loading="lazy">
                     </div>
-                    <h3 class="feature-title">Ligas Privadas</h3>
-                    <p class="feature-description">Crea ligas exclusivas con tus amigos. Compite por el primer puesto en el ranking.</p>
-                </div>
-
-                <div class="feature-card" hx-get="/partials/feature-detail/tokens" hx-trigger="click" hx-target="#modal-container" hx-swap="innerHTML">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 6v12"></path>
-                            <path d="M8 10h8"></path>
-                            <path d="M8 14h8"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">SkillTokens</h3>
-                    <p class="feature-description">Economía virtual sin valor real. Gana tokens acertando predicciones y escala posiciones.</p>
-                </div>
-
-                <div class="feature-card" hx-get="/partials/feature-detail/matches" hx-trigger="click" hx-target="#modal-container" hx-swap="innerHTML">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Partidos Reales</h3>
-                    <p class="feature-description">Apuesta en partidos de fútbol reales de las mejores ligas del mundo con cuotas en vivo.</p>
-                </div>
-
-                <div class="feature-card" hx-get="/partials/feature-detail/communities" hx-trigger="click" hx-target="#modal-container" hx-swap="innerHTML">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Comunidades</h3>
-                    <p class="feature-description">Únete o crea comunidades con tesoro compartido. Dona tokens y participa en eventos especiales.</p>
-                </div>
-
-                <div class="feature-card" hx-get="/partials/feature-detail/rankings" hx-trigger="click" hx-target="#modal-container" hx-swap="innerHTML">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Rankings Globales</h3>
-                    <p class="feature-description">Mide tu habilidad contra otros usuarios. Rachas, estadísticas y logros desbloqueables.</p>
-                </div>
-
-                <div class="feature-card" hx-get="/partials/feature-detail/safe" hx-trigger="click" hx-target="#modal-container" hx-swap="innerHTML">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            <polyline points="9 12 11 14 15 10"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">100% Seguro</h3>
-                    <p class="feature-description">Sin dinero real, sin riesgo de adicción. Solo competencia sana y emoción deportiva.</p>
                 </div>
             </div>
         </div>
-
     </section>
 
+    <!-- 2. Apuestas -->
+    <section class="showcase showcase-reverse">
+        <div class="container showcase-row fade-in">
+            <div class="showcase-text">
+                <p class="showcase-eyebrow">Apuestas</p>
+                <h3 class="showcase-title">Controla cada predicción que haces</h3>
+                <p class="showcase-description">Tu balance, tus apuestas activas, ganadas y perdidas. Todo visible de un vistazo con el retorno potencial de cada predicción.</p>
+                <ul class="showcase-list">
+                    <li>Balance de SkillTokens siempre visible</li>
+                    <li>Historial completo de predicciones</li>
+                    <li>Retorno potencial calculado al instante</li>
+                </ul>
+            </div>
+            <div class="showcase-phone-wrap">
+                <div class="showcase-phone-glow"></div>
+                <div class="showcase-phone">
+                    <div class="showcase-phone-screen">
+                        <img src="resources/bets.jpeg" alt="Vista de apuestas en SkillBet" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Detalle del partido (two phones: lineup + stats) -->
+    <section class="showcase">
+        <div class="container showcase-row showcase-row-dual fade-in">
+            <div class="showcase-text">
+                <p class="showcase-eyebrow">Detalle del partido</p>
+                <h3 class="showcase-title">Cada dato que necesitas para predecir mejor</h3>
+                <p class="showcase-description">Alineaciones confirmadas, estadísticas en vivo, goles, tarjetas y eventos minuto a minuto. Toda la información para tomar la mejor decisión.</p>
+                <ul class="showcase-list">
+                    <li>Alineaciones con formación táctica</li>
+                    <li>Estadísticas completas del partido</li>
+                    <li>Eventos en vivo minuto a minuto</li>
+                </ul>
+            </div>
+            <div class="showcase-phones-dual">
+                <div class="showcase-phone-wrap showcase-phone-back">
+                    <div class="showcase-phone">
+                        <div class="showcase-phone-screen">
+                            <img src="resources/match-stats.jpeg" alt="Estadísticas del partido" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-phone-wrap showcase-phone-front">
+                    <div class="showcase-phone-glow"></div>
+                    <div class="showcase-phone">
+                        <div class="showcase-phone-screen">
+                            <img src="resources/lineup.jpeg" alt="Alineación del partido" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Comunidades -->
+    <section class="showcase showcase-reverse">
+        <div class="container showcase-row fade-in">
+            <div class="showcase-text">
+                <p class="showcase-eyebrow">Comunidades</p>
+                <h3 class="showcase-title">Crea tu propia comunidad y compite con amigos</h3>
+                <p class="showcase-description">Personaliza tu comunidad con icono, nombre y cuota de entrada. Invita a tus amigos y cread ligas privadas donde solo vosotros competís.</p>
+                <ul class="showcase-list">
+                    <li>Comunidades personalizables con icono</li>
+                    <li>Cuota de entrada en SkillTokens</li>
+                    <li>Ligas privadas dentro de cada comunidad</li>
+                </ul>
+            </div>
+            <div class="showcase-phone-wrap">
+                <div class="showcase-phone-glow"></div>
+                <div class="showcase-phone">
+                    <div class="showcase-phone-screen">
+                        <img src="resources/community.jpeg" alt="Crear comunidad en SkillBet" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Dashboard / Inicio -->
+    <section class="showcase">
+        <div class="container showcase-row fade-in">
+            <div class="showcase-text">
+                <p class="showcase-eyebrow">Tu centro de mando</p>
+                <h3 class="showcase-title">Todo comienza aquí</h3>
+                <p class="showcase-description">Tu pantalla de inicio con la Liga Global, tu balance, ganancias y acceso directo a tus comunidades. Elige tu equipo favorito y no te pierdas ningún partido.</p>
+                <ul class="showcase-list">
+                    <li>Liga Global con ranking en tiempo real</li>
+                    <li>Balance y ganancias de un vistazo</li>
+                    <li>Acceso rápido a todas tus comunidades</li>
+                </ul>
+            </div>
+            <div class="showcase-phone-wrap">
+                <div class="showcase-phone-glow"></div>
+                <div class="showcase-phone">
+                    <div class="showcase-phone-screen">
+                        <img src="resources/global.jpeg" alt="Pantalla de inicio de SkillBet" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         How it works
+    ══════════════════════════════════════════════ -->
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Cómo funciona</h2>
-                <p class="section-subtitle">Empieza a competir en 3 simples pasos</p>
+                <p class="section-eyebrow fade-in">El proceso</p>
+                <h2 class="section-title fade-in">Cómo funciona</h2>
+                <p class="section-subtitle fade-in">Empieza a competir en 3 simples pasos</p>
             </div>
+
             <div class="steps-container">
-                <div class="step">
+                <div class="step fade-in">
                     <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Crea tu perfil</h3>
-                        <p class="step-description">Regístrate gratis, elige tu equipo favorito y recibe tus primeros SkillTokens de bienvenida.</p>
-                    </div>
+                    <h3 class="step-title">Crea tu perfil</h3>
+                    <p class="step-description">Regístrate gratis, elige tu equipo favorito y recibe tus primeros SkillTokens de bienvenida.</p>
                 </div>
-                <div class="step-connector"></div>
-                <div class="step">
+
+                <div class="step-connector fade-in"></div>
+
+                <div class="step fade-in">
                     <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Únete a una liga</h3>
-                        <p class="step-description">Crea una liga privada para tus amigos o únete a ligas públicas. Compite en comunidades activas.</p>
-                    </div>
+                    <h3 class="step-title">Únete a una liga</h3>
+                    <p class="step-description">Crea una liga privada para tus amigos o únete a ligas públicas. Compite en comunidades activas.</p>
                 </div>
-                <div class="step-connector"></div>
-                <div class="step">
+
+                <div class="step-connector fade-in"></div>
+
+                <div class="step fade-in">
                     <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Predice y gana</h3>
-                        <p class="step-description">Apuesta SkillTokens en partidos reales. Acumula puntos y escala en los rankings.</p>
-                    </div>
+                    <h3 class="step-title">Predice y gana</h3>
+                    <p class="step-description">Apuesta SkillTokens en partidos reales. Acumula puntos y escala en los rankings globales.</p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section class="testimonials">
+    <!-- ══════════════════════════════════════════════
+         Stats
+    ══════════════════════════════════════════════ -->
+    <section class="stats">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
-            </div>
-            <div class="testimonials-grid" hx-get="/partials/testimonials" hx-trigger="load">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Finalmente puedo competir con mis amigos sin arriesgar dinero. ¡La mejor app para los amantes del fútbol!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MG</div>
-                        <div class="author-info">
-                            <span class="author-name">Miguel García</span>
-                            <span class="author-role">Usuario desde 2024</span>
-                        </div>
-                    </div>
+            <div class="stats-grid">
+
+                <div class="stat-item fade-in">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Usuarios activos</span>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Las ligas privadas son increíbles. Tenemos un grupo de 20 amigos y nos lo pasamos genial cada fin de semana."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">LP</div>
-                        <div class="author-info">
-                            <span class="author-name">Laura Pérez</span>
-                            <span class="author-role">Usuario desde 2024</span>
-                        </div>
-                    </div>
+
+                <div class="stat-item fade-in">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Partidos predichos</span>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"El sistema de rankings me tiene enganchado. Cada predicción cuenta y la competición es sana."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">CR</div>
-                        <div class="author-info">
-                            <span class="author-name">Carlos Ruiz</span>
-                            <span class="author-role">Top 100 Global</span>
-                        </div>
-                    </div>
+
+                <div class="stat-item fade-in">
+                    <span class="stat-number">2.5K+</span>
+                    <span class="stat-label">Ligas creadas</span>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- ══════════════════════════════════════════════
+         Download CTA
+    ══════════════════════════════════════════════ -->
     <section id="download" class="download">
         <div class="container">
-            <div class="download-content">
-                <h2 class="download-title">¿Listo para demostrar tu habilidad?</h2>
-                <p class="download-subtitle">Descarga SkillBet gratis y únete a miles de aficionados al fútbol que ya compiten.</p>
-                <div class="download-buttons">
-                    <button class="store-btn" hx-get="/partials/app-store-link" hx-trigger="click" hx-target="this" hx-swap="outerHTML">
-                        <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+            <div class="download-inner">
+                <h2 class="download-title fade-in">¿Listo para demostrar<br>tu habilidad?</h2>
+                <p class="download-subtitle fade-in">Descarga SkillBet gratis y únete a miles de aficionados al fútbol que ya compiten.</p>
+                <div class="download-buttons fade-in">
+
+                    <a href="#" class="store-btn">
+                        <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                         </svg>
                         <div class="store-text">
                             <span class="store-small">Descargar en</span>
                             <span class="store-name">App Store</span>
                         </div>
-                    </button>
-                    <button class="store-btn" hx-get="/partials/play-store-link" hx-trigger="click" hx-target="this" hx-swap="outerHTML">
-                        <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                    </a>
+
+                    <a href="#" class="store-btn">
+                        <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                         </svg>
                         <div class="store-text">
                             <span class="store-small">Disponible en</span>
                             <span class="store-name">Google Play</span>
                         </div>
-                    </button>
+                    </a>
+
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ══════════════════════════════════════════════
+         Footer
+    ══════════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="/" class="logo">
-                        <span class="logo-icon">⚽</span>
+                        <img src="resources/icon.png" alt="SkillBet" class="logo-icon">
                         <span class="logo-text">SkillBet</span>
                     </a>
                     <p class="footer-description">Apuestas deportivas virtuales sin riesgo. Compite con habilidad, no con dinero.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4 class="footer-title">Producto</h4>
+                        <span class="footer-heading">Producto</span>
                         <a href="#features" class="footer-link">Características</a>
                         <a href="#how-it-works" class="footer-link">Cómo funciona</a>
                         <a href="#download" class="footer-link">Descargar</a>
                     </div>
                     <div class="footer-column">
-                        <h4 class="footer-title">Legal</h4>
+                        <span class="footer-heading">Legal</span>
                         <a href="#" class="footer-link">Términos de uso</a>
                         <a href="#" class="footer-link">Política de privacidad</a>
                         <a href="#" class="footer-link">Juego responsable</a>
                     </div>
                     <div class="footer-column">
-                        <h4 class="footer-title">Contacto</h4>
+                        <span class="footer-heading">Contacto</span>
                         <a href="mailto:info@skillbet.app" class="footer-link">info@skillbet.app</a>
                         <a href="#" class="footer-link">Soporte</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2025 SkillBet. Todos los derechos reservados.</p>
+                <p class="copyright">&copy; 2026 SkillBet. Todos los derechos reservados.</p>
                 <p class="disclaimer">SkillBet es una aplicación de entretenimiento. No involucra dinero real ni apuestas con valor monetario.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Modal container (kept for future use, no htmx) -->
     <div id="modal-container"></div>
 
+    <!-- ══════════════════════════════════════════════
+         JavaScript
+    ══════════════════════════════════════════════ -->
     <script>
-        document.body.addEventListener('htmx:afterSwap', function(evt) {
-            if (evt.detail.target.id === 'modal-container' || evt.target.id === 'modal-container') {
-                document.body.style.overflow = 'hidden';
-            }
-        });
+        // Scroll-reveal via IntersectionObserver
+        (function () {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12 });
 
-        document.addEventListener('keydown', function(e) {
+            document.querySelectorAll('.fade-in').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
+
+        // Modal close on Escape key
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeModal();
             }
         });
 
         function closeModal() {
-            const modal = document.getElementById('modal-container');
+            var modal = document.getElementById('modal-container');
             if (modal && modal.innerHTML.trim() !== '') {
                 modal.innerHTML = '';
                 document.body.style.overflow = '';
             }
         }
+
+        // Navbar background intensifies on scroll
+        (function () {
+            var navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 10) {
+                    navbar.style.background = 'rgba(0,0,0,0.88)';
+                } else {
+                    navbar.style.background = 'rgba(0,0,0,0.72)';
+                }
+            }, { passive: true });
+        })();
     </script>
+
 </body>
 </html>
