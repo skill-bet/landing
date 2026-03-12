@@ -693,7 +693,7 @@
             var msg   = document.getElementById('reminder-msg');
             btn.disabled = true;
             btn.textContent = 'Enviando...';
-            fetch('https://formspree.io/f/FORMSPREE_ID', {
+            fetch('https://formspree.io/f/meerkpzy', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                 body: JSON.stringify({ email: email, _subject: 'Nuevo registro: Lanzamiento SkillBet' })
