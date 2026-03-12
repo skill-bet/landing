@@ -121,39 +121,106 @@
                             <span class="countdown-label">Seg</span>
                         </div>
                     </div>
+                    <img class="launch-coins-img" src="resources/coins.png" alt="SkillBet Coins">
                     <a href="#download" class="btn btn-outline">Recuérdame el lanzamiento</a>
                 </div>
 
                 <!-- Airdrop -->
                 <div class="novedad-card novedad-airdrop fade-in">
-                    <div class="airdrop-hero-visual">
-                        <div class="sb-visual-wrap">
-                            <!-- Crypto chart background -->
-                            <svg class="sb-chart-bg" viewBox="0 0 400 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <!-- Grid lines -->
-                                <line x1="0" y1="50" x2="400" y2="50" stroke="rgba(255,107,0,0.08)" stroke-width="1"/>
-                                <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(255,107,0,0.08)" stroke-width="1"/>
-                                <line x1="0" y1="150" x2="400" y2="150" stroke="rgba(255,107,0,0.08)" stroke-width="1"/>
-                                <line x1="80" y1="0" x2="80" y2="200" stroke="rgba(255,107,0,0.06)" stroke-width="1"/>
-                                <line x1="160" y1="0" x2="160" y2="200" stroke="rgba(255,107,0,0.06)" stroke-width="1"/>
-                                <line x1="240" y1="0" x2="240" y2="200" stroke="rgba(255,107,0,0.06)" stroke-width="1"/>
-                                <line x1="320" y1="0" x2="320" y2="200" stroke="rgba(255,107,0,0.06)" stroke-width="1"/>
-                                <!-- Price line chart -->
-                                <polyline points="0,160 40,145 80,130 100,140 130,110 160,90 185,105 210,75 240,55 265,70 290,45 320,30 350,48 380,25 400,15"
-                                    fill="none" stroke="rgba(255,107,0,0.55)" stroke-width="2" stroke-linejoin="round"/>
-                                <!-- Area fill under line -->
-                                <polyline points="0,160 40,145 80,130 100,140 130,110 160,90 185,105 210,75 240,55 265,70 290,45 320,30 350,48 380,25 400,15 400,200 0,200"
-                                    fill="url(#chartFill)" opacity="0.4"/>
-                                <defs>
-                                    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="rgba(255,107,0,0.25)"/>
-                                        <stop offset="100%" stop-color="rgba(255,107,0,0)"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <!-- Coins image -->
-                            <img class="sb-coins-img" src="resources/coins.png" alt="SkillBet Coins">
-                        </div>
+                    <!-- Candlestick chart -->
+                    <div class="airdrop-chart-wrap">
+                        <svg class="airdrop-chart-svg" viewBox="0 0 530 230" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="acFill" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="rgba(255,107,0,0.18)"/>
+                                    <stop offset="100%" stop-color="rgba(255,107,0,0)"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Ticker label -->
+                            <text x="52" y="13" font-size="9" fill="rgba(255,255,255,0.45)" font-family="monospace">SB/USDT</text>
+                            <text x="52" y="25" font-size="11" fill="rgba(0,200,120,0.9)" font-family="monospace" font-weight="bold">+18.4%  ▲</text>
+                            <text x="460" y="13" font-size="8" fill="rgba(255,255,255,0.3)" font-family="monospace">MA5</text>
+                            <line x1="478" y1="9" x2="510" y2="9" stroke="rgba(255,200,0,0.7)" stroke-width="1.5"/>
+                            <!-- Horizontal grid -->
+                            <line x1="50" y1="35" x2="510" y2="35" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                            <line x1="50" y1="75" x2="510" y2="75" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                            <line x1="50" y1="115" x2="510" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                            <line x1="50" y1="155" x2="510" y2="155" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                            <line x1="50" y1="175" x2="510" y2="175" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                            <!-- Vertical grid -->
+                            <line x1="148" y1="15" x2="148" y2="175" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="236" y1="15" x2="236" y2="175" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="324" y1="15" x2="324" y2="175" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="412" y1="15" x2="412" y2="175" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="500" y1="15" x2="500" y2="175" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <!-- Y-axis labels -->
+                            <text x="45" y="38" text-anchor="end" font-size="8" fill="rgba(255,255,255,0.3)" font-family="monospace">90</text>
+                            <text x="45" y="78" text-anchor="end" font-size="8" fill="rgba(255,255,255,0.3)" font-family="monospace">70</text>
+                            <text x="45" y="118" text-anchor="end" font-size="8" fill="rgba(255,255,255,0.3)" font-family="monospace">50</text>
+                            <text x="45" y="158" text-anchor="end" font-size="8" fill="rgba(255,255,255,0.3)" font-family="monospace">30</text>
+                            <!-- X-axis labels -->
+                            <text x="60"  y="225" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.25)" font-family="monospace">Ene</text>
+                            <text x="148" y="225" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.25)" font-family="monospace">Feb</text>
+                            <text x="236" y="225" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.25)" font-family="monospace">Mar</text>
+                            <text x="324" y="225" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.25)" font-family="monospace">Abr</text>
+                            <text x="412" y="225" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.25)" font-family="monospace">May</text>
+                            <text x="500" y="225" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.25)" font-family="monospace">Jun</text>
+                            <!-- Area fill under MA line -->
+                            <polygon points="148,132 170,129 192,127 214,123 236,118 258,116 280,111 302,101 324,95 346,90 368,81 390,74 412,68 434,59 456,53 478,46 500,37 500,175 148,175" fill="url(#acFill)"/>
+                            <!-- Volume divider -->
+                            <line x1="50" y1="183" x2="510" y2="183" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                            <!-- Volume bars -->
+                            <rect x="56"  y="202" width="8" height="8"  fill="rgba(0,200,120,0.35)"/>
+                            <rect x="78"  y="205" width="8" height="5"  fill="rgba(255,80,80,0.35)"/>
+                            <rect x="100" y="203" width="8" height="7"  fill="rgba(0,200,120,0.35)"/>
+                            <rect x="122" y="196" width="8" height="14" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="144" y="199" width="8" height="11" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="166" y="201" width="8" height="9"  fill="rgba(255,80,80,0.35)"/>
+                            <rect x="188" y="204" width="8" height="6"  fill="rgba(255,80,80,0.35)"/>
+                            <rect x="210" y="192" width="8" height="18" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="232" y="194" width="8" height="16" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="254" y="200" width="8" height="10" fill="rgba(255,80,80,0.35)"/>
+                            <rect x="276" y="201" width="8" height="9"  fill="rgba(0,200,120,0.35)"/>
+                            <rect x="298" y="188" width="8" height="22" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="320" y="197" width="8" height="13" fill="rgba(255,80,80,0.35)"/>
+                            <rect x="342" y="193" width="8" height="17" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="364" y="191" width="8" height="19" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="386" y="198" width="8" height="12" fill="rgba(255,80,80,0.35)"/>
+                            <rect x="408" y="195" width="8" height="15" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="430" y="190" width="8" height="20" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="452" y="200" width="8" height="10" fill="rgba(255,80,80,0.35)"/>
+                            <rect x="474" y="189" width="8" height="21" fill="rgba(0,200,120,0.35)"/>
+                            <rect x="496" y="196" width="8" height="14" fill="rgba(0,200,120,0.35)"/>
+                            <!-- Candlestick wicks + bodies -->
+                            <line x1="60"  y1="135" x2="60"  y2="155" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="56"  y="139" width="8" height="6"  fill="rgba(0,200,120,0.9)"/>
+                            <line x1="82"  y1="131" x2="82"  y2="147" stroke="rgba(255,80,80,0.9)"  stroke-width="1.5"/> <rect x="78"  y="139" width="8" height="4"  fill="rgba(255,80,80,0.9)"/>
+                            <line x1="104" y1="133" x2="104" y2="153" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="100" y="135" width="8" height="8"  fill="rgba(0,200,120,0.9)"/>
+                            <line x1="126" y1="119" x2="126" y2="139" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="122" y="125" width="8" height="10" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="148" y1="113" x2="148" y2="129" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="144" y="117" width="8" height="8"  fill="rgba(0,200,120,0.9)"/>
+                            <line x1="170" y1="109" x2="170" y2="127" stroke="rgba(255,80,80,0.9)"  stroke-width="1.5"/> <rect x="166" y="117" width="8" height="8"  fill="rgba(255,80,80,0.9)"/>
+                            <line x1="192" y1="121" x2="192" y2="133" stroke="rgba(255,80,80,0.9)"  stroke-width="1.5"/> <rect x="188" y="125" width="8" height="6"  fill="rgba(255,80,80,0.9)"/>
+                            <line x1="214" y1="113" x2="214" y2="135" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="210" y="115" width="8" height="16" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="236" y1="97"  x2="236" y2="119" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="232" y="101" width="8" height="14" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="258" y1="93"  x2="258" y2="111" stroke="rgba(255,80,80,0.9)"  stroke-width="1.5"/> <rect x="254" y="101" width="8" height="6"  fill="rgba(255,80,80,0.9)"/>
+                            <line x1="280" y1="95"  x2="280" y2="115" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="276" y="99"  width="8" height="8"  fill="rgba(0,200,120,0.9)"/>
+                            <line x1="302" y1="77"  x2="302" y2="103" stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="298" y="83"  width="8" height="16" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="324" y1="73"  x2="324" y2="93"  stroke="rgba(255,80,80,0.9)"  stroke-width="1.5"/> <rect x="320" y="83"  width="8" height="6"  fill="rgba(255,80,80,0.9)"/>
+                            <line x1="346" y1="73"  x2="346" y2="95"  stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="342" y="75"  width="8" height="12" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="368" y1="55"  x2="368" y2="77"  stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="364" y="61"  width="8" height="14" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="390" y1="51"  x2="390" y2="71"  stroke="rgba(255,80,80,0.9)"  stroke-width="1.5"/> <rect x="386" y="61"  width="8" height="6"  fill="rgba(255,80,80,0.9)"/>
+                            <line x1="412" y1="47"  x2="412" y2="71"  stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="408" y="51"  width="8" height="16" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="434" y1="33"  x2="434" y2="57"  stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="430" y="39"  width="8" height="12" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="456" y1="29"  x2="456" y2="49"  stroke="rgba(255,80,80,0.9)"  stroke-width="1.5"/> <rect x="452" y="39"  width="8" height="6"  fill="rgba(255,80,80,0.9)"/>
+                            <line x1="478" y1="23"  x2="478" y2="49"  stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="474" y="29"  width="8" height="16" fill="rgba(0,200,120,0.9)"/>
+                            <line x1="500" y1="19"  x2="500" y2="39"  stroke="rgba(0,200,120,0.9)"  stroke-width="1.5"/> <rect x="496" y="23"  width="8" height="6"  fill="rgba(0,200,120,0.9)"/>
+                            <!-- MA5 line -->
+                            <polyline points="148,132 170,129 192,127 214,123 236,118 258,116 280,111 302,101 324,95 346,90 368,81 390,74 412,68 434,59 456,53 478,46 500,37"
+                                fill="none" stroke="rgba(255,200,0,0.75)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+                            <!-- Current price dashed line -->
+                            <line x1="50" y1="23" x2="496" y2="23" stroke="rgba(255,107,0,0.45)" stroke-width="1" stroke-dasharray="4,3"/>
+                            <rect x="497" y="18" width="13" height="10" rx="2" fill="rgba(255,107,0,0.85)"/>
+                            <text x="503" y="26" text-anchor="middle" font-size="7" fill="white" font-family="monospace" font-weight="bold">96</text>
+                        </svg>
                     </div>
                     <p class="novedad-eyebrow">Airdrop</p>
                     <h3 class="novedad-title">Airdrop de la Comunidad SkillBet</h3>
