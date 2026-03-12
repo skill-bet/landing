@@ -1181,24 +1181,83 @@ img {
     margin-top: -8px;
 }
 
-/* ── Airdrop hero visual (stacked SB coins) ── */
+/* ── Airdrop hero visual (holographic hand + coins) ── */
 .airdrop-hero-visual {
     display: flex;
     justify-content: center;
     margin: 0 0 8px;
 }
 
+.sb-visual-wrap {
+    position: relative;
+    width: 260px;
+    height: 360px;
+    isolation: isolate;
+}
+
+.sb-visual-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 40%, rgba(71, 118, 230, 0.14), transparent 55%),
+        radial-gradient(ellipse at 50% 80%, rgba(0, 220, 255, 0.08), transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+}
+
 .sb-coins-svg {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    z-index: 3;
     animation: sbPileFloat 4s ease-in-out infinite;
-    filter: drop-shadow(0 12px 28px rgba(255, 107, 0, 0.35));
+    filter: drop-shadow(0 8px 20px rgba(255, 107, 0, 0.5));
+}
+
+.sb-hand-svg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 236px;
+    height: auto;
+    z-index: 2;
+    filter:
+        drop-shadow(0 0 10px rgba(92, 234, 255, 0.55))
+        drop-shadow(0 0 30px rgba(92, 234, 255, 0.25));
+    animation: sbHandFloat 4.5s ease-in-out infinite;
+}
+
+.sb-scan-line {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(99, 230, 255, 0.85), transparent);
+    box-shadow: 0 0 10px rgba(99, 230, 255, 0.8), 0 0 24px rgba(46, 203, 255, 0.6);
+    z-index: 4;
+    pointer-events: none;
+    animation: sbScanMove 4.6s ease-in-out infinite;
 }
 
 @keyframes sbPileFloat {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-8px); }
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(-10px); }
+}
+
+@keyframes sbHandFloat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(-8px); }
+}
+
+@keyframes sbScanMove {
+    0%   { top: 12%; opacity: 0.3; }
+    45%  { opacity: 0.9; }
+    50%  { top: 82%; opacity: 0.8; }
+    100% { top: 12%; opacity: 0.3; }
 }
 
 @media (max-width: 768px) {
