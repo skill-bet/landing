@@ -1210,12 +1210,13 @@ img {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 240px;
+    width: 260px;
     height: auto;
     z-index: 3;
     animation: sbPileFloat 4s ease-in-out infinite;
-    filter: drop-shadow(0 8px 24px rgba(255, 107, 0, 0.5));
-    mix-blend-mode: screen;
+    filter: drop-shadow(0 8px 24px rgba(255, 107, 0, 0.6));
+    mask-image: radial-gradient(ellipse 80% 75% at 50% 42%, black 40%, transparent 85%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 75% at 50% 42%, black 40%, transparent 85%);
 }
 
 .sb-hand-svg {
