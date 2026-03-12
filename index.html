@@ -24,6 +24,7 @@
                 <span class="logo-text">SkillBet</span>
             </a>
             <div class="nav-links">
+                <a href="#novedades" class="nav-link">Novedades</a>
                 <a href="#features" class="nav-link">Características</a>
                 <a href="#how-it-works" class="nav-link">Cómo funciona</a>
                 <a href="#download" class="nav-link">Descargar</a>
@@ -74,6 +75,113 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         Novedades (Tablón de Anuncios)
+    ══════════════════════════════════════════════ -->
+    <section id="novedades" class="novedades">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow fade-in">Novedades</p>
+                <h2 class="section-title fade-in">Lo último de SkillBet</h2>
+            </div>
+
+            <div class="novedades-grid">
+
+                <!-- Lanzamiento -->
+                <div class="novedad-card fade-in">
+                    <div class="novedad-card-icon">🚀</div>
+                    <p class="novedad-eyebrow">Próximamente</p>
+                    <h3 class="novedad-title">Lanzamiento Oficial</h3>
+                    <p class="novedad-subtitle">La app llega a iOS y Android</p>
+                    <div class="launch-date-box">
+                        <span class="launch-date-label">Fecha de lanzamiento</span>
+                        <span class="launch-date-value">22 Marzo 2026</span>
+                    </div>
+                    <div class="launch-countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="cd-days">--</span>
+                            <span class="countdown-label">Días</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="cd-hours">--</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="cd-minutes">--</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="cd-seconds">--</span>
+                            <span class="countdown-label">Seg</span>
+                        </div>
+                    </div>
+                    <a href="#download" class="btn btn-outline">Recuérdame el lanzamiento</a>
+                </div>
+
+                <!-- Airdrop -->
+                <div class="novedad-card novedad-airdrop fade-in">
+                    <div class="novedad-card-icon">🪂</div>
+                    <p class="novedad-eyebrow">Airdrop</p>
+                    <h3 class="novedad-title">Airdrop de la Comunidad SkillBet</h3>
+                    <p class="novedad-subtitle">¡Únete pronto y gana SkillTokens gratis!</p>
+
+                    <div class="airdrop-stats">
+                        <div class="airdrop-stat">
+                            <span class="airdrop-stat-label">Total de SkillTokens</span>
+                            <span class="airdrop-stat-number">15,000,000</span>
+                            <span class="airdrop-stat-unit">TOKENS</span>
+                        </div>
+                        <div class="airdrop-stat-divider"></div>
+                        <div class="airdrop-stat">
+                            <span class="airdrop-stat-label">Participantes Actuales</span>
+                            <span class="airdrop-stat-number">1,258</span>
+                        </div>
+                    </div>
+
+                    <div class="airdrop-tasks">
+                        <div class="airdrop-task">
+                            <div class="airdrop-task-icon">📱</div>
+                            <div class="airdrop-task-info">
+                                <span class="airdrop-task-name">Descargar la App</span>
+                                <span class="airdrop-task-reward">Gana <strong>500</strong> SkillTokens</span>
+                            </div>
+                        </div>
+                        <div class="airdrop-task">
+                            <div class="airdrop-task-icon">👤</div>
+                            <div class="airdrop-task-info">
+                                <span class="airdrop-task-name">Crear una Cuenta</span>
+                                <span class="airdrop-task-reward">Gana <strong>300</strong> SkillTokens</span>
+                            </div>
+                        </div>
+                        <div class="airdrop-task airdrop-task-pending">
+                            <div class="airdrop-task-icon">👛</div>
+                            <div class="airdrop-task-info">
+                                <span class="airdrop-task-name">Conectar tu Wallet</span>
+                                <span class="airdrop-task-reward">Gana <strong>200</strong> SkillTokens</span>
+                            </div>
+                            <span class="airdrop-task-badge">Pendiente</span>
+                        </div>
+                        <div class="airdrop-task airdrop-task-pending">
+                            <div class="airdrop-task-icon">📢</div>
+                            <div class="airdrop-task-info">
+                                <span class="airdrop-task-name">Invitar Amigos</span>
+                                <span class="airdrop-task-reward">Gana <strong>400</strong> SkillTokens</span>
+                            </div>
+                            <span class="airdrop-task-badge">Pendiente</span>
+                        </div>
+                    </div>
+
+                    <a href="#download" class="btn btn-primary airdrop-cta">RECLAMAR TUS TOKENS</a>
+                    <p class="airdrop-disclaimer">Oferta por tiempo limitado &middot; Recompensas por orden de llegada</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -418,6 +526,37 @@
                 document.body.style.overflow = '';
             }
         }
+
+        // Countdown to launch — change LAUNCH_DATE to your actual date
+        (function () {
+            var LAUNCH_DATE = new Date('2026-03-22T00:00:00').getTime();
+            function pad(n) { return n < 10 ? '0' + n : n; }
+            function tick() {
+                var now = Date.now();
+                var diff = LAUNCH_DATE - now;
+                if (diff <= 0) {
+                    ['cd-days','cd-hours','cd-minutes','cd-seconds'].forEach(function(id) {
+                        var el = document.getElementById(id);
+                        if (el) el.textContent = '00';
+                    });
+                    return;
+                }
+                var d = Math.floor(diff / 86400000);
+                var h = Math.floor((diff % 86400000) / 3600000);
+                var m = Math.floor((diff % 3600000) / 60000);
+                var s = Math.floor((diff % 60000) / 1000);
+                var days = document.getElementById('cd-days');
+                var hours = document.getElementById('cd-hours');
+                var minutes = document.getElementById('cd-minutes');
+                var seconds = document.getElementById('cd-seconds');
+                if (days) days.textContent = pad(d);
+                if (hours) hours.textContent = pad(h);
+                if (minutes) minutes.textContent = pad(m);
+                if (seconds) seconds.textContent = pad(s);
+            }
+            tick();
+            setInterval(tick, 1000);
+        })();
 
         // Navbar background intensifies on scroll
         (function () {
