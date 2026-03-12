@@ -1192,7 +1192,6 @@ img {
     position: relative;
     width: 260px;
     height: 360px;
-    isolation: isolate;
 }
 
 .sb-visual-wrap::before {
