@@ -122,7 +122,7 @@
                         </div>
                     </div>
                     <img class="launch-coins-img" src="resources/coins.png" alt="SkillBet Coins">
-                    <a href="#download" class="btn btn-outline">Recuérdame el lanzamiento</a>
+                    <button onclick="openReminderModal()" class="btn btn-outline">Recuérdame el lanzamiento</button>
                 </div>
 
                 <!-- Airdrop -->
@@ -664,6 +664,57 @@
                 }
             }, { passive: true });
         })();
+
+        // Modal: Recuérdame el lanzamiento
+        function openReminderModal() {
+            var container = document.getElementById('modal-container');
+            container.innerHTML = [
+                '<div class="modal-overlay" onclick="if(event.target===this)closeModal()">',
+                '  <div class="modal-content">',
+                '    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">&times;</button>',
+                '    <div class="modal-icon">🚀</div>',
+                '    <h2 class="modal-title">Recuérdame el lanzamiento</h2>',
+                '    <p class="modal-text">Te avisamos el día que SkillBet llegue a iOS y Android. Sin spam, solo un aviso.</p>',
+                '    <form id="reminder-form" onsubmit="submitReminder(event)">',
+                '      <input type="email" id="reminder-email" class="modal-input" placeholder="tu@email.com" required autocomplete="email">',
+                '      <button type="submit" class="btn btn-primary modal-submit" id="reminder-btn">Avisarme el día del lanzamiento</button>',
+                '      <p id="reminder-msg" class="modal-msg"></p>',
+                '    </form>',
+                '  </div>',
+                '</div>'
+            ].join('');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function submitReminder(e) {
+            e.preventDefault();
+            var email = document.getElementById('reminder-email').value;
+            var btn   = document.getElementById('reminder-btn');
+            var msg   = document.getElementById('reminder-msg');
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+            fetch('https://formspree.io/f/FORMSPREE_ID', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ email: email, _subject: 'Nuevo registro: Lanzamiento SkillBet' })
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.ok) {
+                    document.getElementById('reminder-form').innerHTML =
+                        '<div class="modal-success"><span>✅</span><p>¡Listo! Te avisamos el día del lanzamiento.</p></div>';
+                } else {
+                    msg.textContent = 'Algo salió mal. Inténtalo de nuevo.';
+                    btn.disabled = false;
+                    btn.textContent = 'Avisarme el día del lanzamiento';
+                }
+            })
+            .catch(function() {
+                msg.textContent = 'Error de conexión. Inténtalo de nuevo.';
+                btn.disabled = false;
+                btn.textContent = 'Avisarme el día del lanzamiento';
+            });
+        }
     </script>
 
 </body>

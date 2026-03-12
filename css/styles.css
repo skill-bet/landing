@@ -1293,6 +1293,58 @@ img {
     line-height: 1.6;
 }
 
+.modal-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    background: var(--background);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.modal-input:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.modal-submit {
+    width: 100%;
+}
+
+.modal-msg {
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255, 80, 80, 0.9);
+    text-align: center;
+    min-height: 20px;
+}
+
+.modal-success {
+    text-align: center;
+    padding: 16px 0;
+}
+
+.modal-success span {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.modal-success p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
     :root {
