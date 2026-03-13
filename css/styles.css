@@ -629,8 +629,8 @@ img {
 
 /* ── Bare screenshot (no CSS phone frame) ─────────────── */
 .showcase-img-bare {
-    width: 260px;
-    height: auto;
+    width: auto;
+    height: 520px;
     box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.6);
     position: relative;
     z-index: 1;
@@ -1497,6 +1497,10 @@ img {
 
     .showcase-phone {
         width: 220px;
+        height: 440px;
+    }
+
+    .showcase-img-bare {
         height: 440px;
     }
 
