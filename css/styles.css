@@ -1297,12 +1297,12 @@ img {
 
 .airdrop-chart-coin {
     position: absolute;
-    width: 160px;
-    height: 160px;
-    right: -10px;
-    bottom: -20px;
+    width: 220px;
+    height: 220px;
+    top: -30px;
+    right: 5px;
     object-fit: contain;
-    opacity: 0.18;
+    opacity: 0.28;
     pointer-events: none;
     z-index: 1;
 }
