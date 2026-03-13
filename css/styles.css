@@ -5,8 +5,8 @@
 
 :root {
     --background:     #000000;
-    --surface:        #0a0a0a;
-    --surface-light:  #111111;
+    --surface:        #000000;
+    --surface-light:  #000000;
     --overlay:        rgba(0, 0, 0, 0.7);
 
     --primary:        #FF6B00;
