@@ -5,8 +5,8 @@
 
 :root {
     --background:     #000000;
-    --surface:        #000000;
-    --surface-light:  #000000;
+    --surface:        #1D1D1F;
+    --surface-light:  #2D2D2D;
     --overlay:        rgba(0, 0, 0, 0.7);
 
     --primary:        #FF6B00;
@@ -1285,59 +1285,9 @@ img {
     margin-top: -8px;
 }
 
-/* ── Airdrop skilltoken coins ── */
-.airdrop-coins {
-    position: relative;
-    height: 110px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin: 4px 0 8px;
-}
-
-.airdrop-coin {
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    mix-blend-mode: screen;
-}
-
-.airdrop-coin-back {
-    width: 80px;
-    height: 80px;
-    bottom: 0;
-    left: calc(50% - 68px);
-    opacity: 0.75;
-    animation: coinFloat 4s ease-in-out infinite;
-    animation-delay: 0.4s;
-}
-
-.airdrop-coin-mid {
-    width: 75px;
-    height: 75px;
-    bottom: 8px;
-    left: calc(50% + 10px);
-    opacity: 0.8;
-    animation: coinFloat 4s ease-in-out infinite;
-    animation-delay: 0.8s;
-}
-
-.airdrop-coin-front {
-    width: 100px;
-    height: 100px;
-    bottom: 12px;
-    left: calc(50% - 22px);
-    animation: coinFloat 4s ease-in-out infinite;
-}
-
-@keyframes coinFloat {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-8px); }
-}
-
 /* ── Airdrop candlestick chart ── */
 .airdrop-chart-wrap {
+    position: relative;
     width: calc(100% + 80px);
     margin: -40px -40px 20px;
     overflow: hidden;
@@ -1345,10 +1295,24 @@ img {
     background: rgba(255, 107, 0, 0.03);
 }
 
+.airdrop-chart-coin {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -10px;
+    bottom: -20px;
+    object-fit: contain;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 1;
+}
+
 .airdrop-chart-svg {
     display: block;
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 2;
 }
 
 /* ── Launch card chest image ── */
