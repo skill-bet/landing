@@ -631,6 +631,7 @@ img {
 .showcase-img-bare {
     width: auto;
     height: 520px;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.6);
     position: relative;
     z-index: 1;
 }
