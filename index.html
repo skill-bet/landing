@@ -18,7 +18,7 @@
          Launch announcement bar
     ══════════════════════════════════════════════ -->
     <div class="launch-bar">
-        <span class="launch-bar-text">🚀 Lanzamiento oficial el <strong>22 de Marzo</strong> —</span>
+        <span class="launch-bar-text" data-i18n="launch_bar_text">🚀 Lanzamiento oficial el <strong>22 de Marzo</strong> —</span>
         <span class="launch-bar-countdown">
             <span class="lb-unit"><span id="lb-days">--</span><em>d</em></span>
             <span class="lb-sep">:</span>
@@ -28,7 +28,7 @@
             <span class="lb-sep">:</span>
             <span class="lb-unit"><span id="lb-seconds">--</span><em>s</em></span>
         </span>
-        <button onclick="openReminderModal()" class="launch-bar-cta">Inscríbete gratis</button>
+        <button onclick="openReminderModal()" class="launch-bar-cta" data-i18n="launch_bar_cta">Inscríbete gratis</button>
         <div class="launch-bar-socials">
             <!-- Instagram -->
             <a href="https://www.instagram.com/skillbet.es?igsh=ajFnYXJ3cmhlMTc4&utm_source=qr" target="_blank" rel="noopener" class="lb-social" aria-label="Instagram">
@@ -55,12 +55,17 @@
                 <span class="logo-text">SkillBet</span>
             </a>
             <div class="nav-links">
-                <a href="#novedades" class="nav-link">Novedades</a>
-                <a href="#features" class="nav-link">Características</a>
-                <a href="#how-it-works" class="nav-link">Cómo funciona</a>
-                <a href="#download" class="nav-link">Descargar</a>
+                <a href="#novedades" class="nav-link" data-i18n="nav_novedades">Novedades</a>
+                <a href="#features" class="nav-link" data-i18n="nav_features">Características</a>
+                <a href="#how-it-works" class="nav-link" data-i18n="nav_how">Cómo funciona</a>
+                <a href="#download" class="nav-link" data-i18n="nav_download">Descargar</a>
             </div>
-            <a href="#download" class="btn btn-primary btn-sm">Descargar App</a>
+            <!-- Language toggle -->
+            <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language">
+                <button class="lang-btn lang-btn-es active" id="lang-btn-es" onclick="setLang('es')" aria-pressed="true">ES</button>
+                <button class="lang-btn lang-btn-en" id="lang-btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+            </div>
+            <a href="#download" class="btn btn-primary btn-sm" data-i18n="nav_cta">Descargar App</a>
         </div>
     </nav>
 
@@ -70,23 +75,23 @@
     <section class="hero">
         <div class="hero-inner">
 
-            <div class="hero-badge fade-in">
+            <div class="hero-badge fade-in" data-i18n="hero_badge">
                 <span class="badge-dot"></span>
                 Sin dinero real &middot; Sin riesgo
             </div>
 
-            <h1 class="hero-title fade-in">
+            <h1 class="hero-title fade-in" data-i18n="hero_title">
                 Demuestra tu <span class="text-gradient">habilidad</span><br>prediciendo fútbol
             </h1>
 
-            <p class="hero-subtitle fade-in">
+            <p class="hero-subtitle fade-in" data-i18n="hero_subtitle">
                 Compite con amigos en ligas privadas, predice resultados reales y escala en los rankings.
                 Todo con tokens virtuales.
             </p>
 
             <div class="hero-cta fade-in">
-                <a href="#download" class="btn btn-primary">Descargar App</a>
-                <button onclick="openReminderModal()" class="btn btn-outline">Inscríbete al lanzamiento</button>
+                <a href="#download" class="btn btn-primary" data-i18n="hero_cta_download">Descargar App</a>
+                <button onclick="openReminderModal()" class="btn btn-outline" data-i18n="hero_cta_remind">Inscríbete al lanzamiento</button>
             </div>
 
             <!-- Phone mockup -->
@@ -102,7 +107,7 @@
                     <span>+500 SkillTokens</span>
                 </div>
                 <div class="floating-card floating-card-2">
-                    <span>¡Predicción correcta!</span>
+                    <span data-i18n="hero_correct_prediction">¡Predicción correcta!</span>
                 </div>
             </div>
 
@@ -115,8 +120,8 @@
     <section id="novedades" class="novedades">
         <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow fade-in">Novedades</p>
-                <h2 class="section-title fade-in">Lo último de SkillBet</h2>
+                <p class="section-eyebrow fade-in" data-i18n="novedades_eyebrow">Novedades</p>
+                <h2 class="section-title fade-in" data-i18n="novedades_title">Lo último de SkillBet</h2>
             </div>
 
             <div class="novedades-grid">
@@ -124,36 +129,36 @@
                 <!-- Lanzamiento -->
                 <div class="novedad-card fade-in">
                     <div class="novedad-card-icon">🚀</div>
-                    <p class="novedad-eyebrow">Próximamente</p>
-                    <h3 class="novedad-title">Lanzamiento Oficial</h3>
-                    <p class="novedad-subtitle">La app llega a iOS y Android</p>
+                    <p class="novedad-eyebrow" data-i18n="launch_eyebrow">Próximamente</p>
+                    <h3 class="novedad-title" data-i18n="launch_title">Lanzamiento Oficial</h3>
+                    <p class="novedad-subtitle" data-i18n="launch_subtitle">La app llega a iOS y Android</p>
                     <div class="launch-date-box">
-                        <span class="launch-date-label">Fecha de lanzamiento</span>
-                        <span class="launch-date-value">22 Marzo 2026</span>
+                        <span class="launch-date-label" data-i18n="launch_date_label">Fecha de lanzamiento</span>
+                        <span class="launch-date-value" data-i18n="launch_date_value">22 Marzo 2026</span>
                     </div>
                     <div class="launch-countdown">
                         <div class="countdown-item">
                             <span class="countdown-number" id="cd-days">--</span>
-                            <span class="countdown-label">Días</span>
+                            <span class="countdown-label" data-i18n="countdown_days">Días</span>
                         </div>
                         <div class="countdown-sep">:</div>
                         <div class="countdown-item">
                             <span class="countdown-number" id="cd-hours">--</span>
-                            <span class="countdown-label">Horas</span>
+                            <span class="countdown-label" data-i18n="countdown_hours">Horas</span>
                         </div>
                         <div class="countdown-sep">:</div>
                         <div class="countdown-item">
                             <span class="countdown-number" id="cd-minutes">--</span>
-                            <span class="countdown-label">Min</span>
+                            <span class="countdown-label" data-i18n="countdown_minutes">Min</span>
                         </div>
                         <div class="countdown-sep">:</div>
                         <div class="countdown-item">
                             <span class="countdown-number" id="cd-seconds">--</span>
-                            <span class="countdown-label">Seg</span>
+                            <span class="countdown-label" data-i18n="countdown_seconds">Seg</span>
                         </div>
                     </div>
                     <img class="launch-coins-img" src="resources/coins.png" alt="SkillBet Coins">
-                    <button onclick="openReminderModal()" class="btn btn-outline">Recuérdame el lanzamiento</button>
+                    <button onclick="openReminderModal()" class="btn btn-outline" data-i18n="launch_remind_btn">Recuérdame el lanzamiento</button>
                 </div>
 
                 <!-- Airdrop -->
@@ -256,21 +261,21 @@
                     </div>
                     <div class="airdrop-chart-label">
                         <span class="airdrop-chart-ticker">$SKILLBET</span>
-                        <span class="airdrop-chart-slogan">🚀 Skyrocketing soon</span>
+                        <span class="airdrop-chart-slogan" data-i18n="airdrop_chart_slogan">🚀 Skyrocketing soon</span>
                     </div>
                     <p class="novedad-eyebrow">Airdrop</p>
-                    <h3 class="novedad-title">Airdrop de la Comunidad SkillBet</h3>
-                    <p class="novedad-subtitle">¡Únete pronto y gana SkillTokens gratis!</p>
+                    <h3 class="novedad-title" data-i18n="airdrop_title">Airdrop de la Comunidad SkillBet</h3>
+                    <p class="novedad-subtitle" data-i18n="airdrop_subtitle">¡Únete pronto y gana SkillTokens gratis!</p>
 
                     <div class="airdrop-stats">
                         <div class="airdrop-stat">
-                            <span class="airdrop-stat-label">Puedes ganar hasta</span>
+                            <span class="airdrop-stat-label" data-i18n="airdrop_earn_label">Puedes ganar hasta</span>
                             <span class="airdrop-stat-number">1,400</span>
                             <span class="airdrop-stat-unit">SB TOKENS</span>
                         </div>
                         <div class="airdrop-stat-divider"></div>
                         <div class="airdrop-stat">
-                            <span class="airdrop-stat-label">Participantes Actuales</span>
+                            <span class="airdrop-stat-label" data-i18n="airdrop_participants_label">Participantes Actuales</span>
                             <span class="airdrop-stat-number">1,258</span>
                         </div>
                     </div>
@@ -279,37 +284,37 @@
                         <div class="airdrop-task">
                             <div class="airdrop-task-icon">📱</div>
                             <div class="airdrop-task-info">
-                                <span class="airdrop-task-name">Descargar la App</span>
-                                <span class="airdrop-task-reward">Gana <strong>500</strong> SkillTokens</span>
+                                <span class="airdrop-task-name" data-i18n="airdrop_task_download">Descargar la App</span>
+                                <span class="airdrop-task-reward" data-i18n="airdrop_task_download_reward">Gana <strong>500</strong> SkillTokens</span>
                             </div>
                         </div>
                         <div class="airdrop-task">
                             <div class="airdrop-task-icon">👤</div>
                             <div class="airdrop-task-info">
-                                <span class="airdrop-task-name">Crear una Cuenta</span>
-                                <span class="airdrop-task-reward">Gana <strong>300</strong> SkillTokens</span>
+                                <span class="airdrop-task-name" data-i18n="airdrop_task_account">Crear una Cuenta</span>
+                                <span class="airdrop-task-reward" data-i18n="airdrop_task_account_reward">Gana <strong>300</strong> SkillTokens</span>
                             </div>
                         </div>
                         <div class="airdrop-task airdrop-task-pending">
                             <div class="airdrop-task-icon">👛</div>
                             <div class="airdrop-task-info">
-                                <span class="airdrop-task-name">Conectar tu Wallet</span>
-                                <span class="airdrop-task-reward">Gana <strong>200</strong> SkillTokens</span>
+                                <span class="airdrop-task-name" data-i18n="airdrop_task_wallet">Conectar tu Wallet</span>
+                                <span class="airdrop-task-reward" data-i18n="airdrop_task_wallet_reward">Gana <strong>200</strong> SkillTokens</span>
                             </div>
-                            <span class="airdrop-task-badge">Pendiente</span>
+                            <span class="airdrop-task-badge" data-i18n="airdrop_task_pending">Pendiente</span>
                         </div>
                         <div class="airdrop-task airdrop-task-pending">
                             <div class="airdrop-task-icon">📢</div>
                             <div class="airdrop-task-info">
-                                <span class="airdrop-task-name">Invitar Amigos</span>
-                                <span class="airdrop-task-reward">Gana <strong>400</strong> SkillTokens</span>
+                                <span class="airdrop-task-name" data-i18n="airdrop_task_invite">Invitar Amigos</span>
+                                <span class="airdrop-task-reward" data-i18n="airdrop_task_invite_reward">Gana <strong>400</strong> SkillTokens</span>
                             </div>
-                            <span class="airdrop-task-badge">Pendiente</span>
+                            <span class="airdrop-task-badge" data-i18n="airdrop_task_pending">Pendiente</span>
                         </div>
                     </div>
 
-                    <a href="#download" class="btn btn-primary airdrop-cta">RECLAMAR TUS TOKENS</a>
-                    <p class="airdrop-disclaimer">Oferta por tiempo limitado &middot; Recompensas por orden de llegada</p>
+                    <a href="#download" class="btn btn-primary airdrop-cta" data-i18n="airdrop_cta">RECLAMAR TUS TOKENS</a>
+                    <p class="airdrop-disclaimer" data-i18n="airdrop_disclaimer">Oferta por tiempo limitado &middot; Recompensas por orden de llegada</p>
                 </div>
 
             </div>
@@ -323,9 +328,9 @@
     <!-- Showcase header -->
     <section id="features" class="showcase-intro">
         <div class="container">
-            <p class="section-eyebrow fade-in">Descubre la app</p>
-            <h2 class="section-title fade-in">Todo lo que necesitas<br>para competir</h2>
-            <p class="section-subtitle fade-in">Cada función diseñada para que vivas la emoción del fútbol de una forma única.</p>
+            <p class="section-eyebrow fade-in" data-i18n="features_eyebrow">Descubre la app</p>
+            <h2 class="section-title fade-in" data-i18n="features_title">Todo lo que necesitas<br>para competir</h2>
+            <p class="section-subtitle fade-in" data-i18n="features_subtitle">Cada función diseñada para que vivas la emoción del fútbol de una forma única.</p>
         </div>
     </section>
 
@@ -333,13 +338,13 @@
     <section class="showcase">
         <div class="container showcase-row fade-in">
             <div class="showcase-text">
-                <p class="showcase-eyebrow">Partidos</p>
-                <h3 class="showcase-title">Explora partidos reales de las mejores ligas</h3>
-                <p class="showcase-description">Navega por el calendario, filtra por liga y consulta las cuotas antes de hacer tu predicción. La Liga, Premier League, Serie A y más, todo en un solo lugar.</p>
+                <p class="showcase-eyebrow" data-i18n="sc1_eyebrow">Partidos</p>
+                <h3 class="showcase-title" data-i18n="sc1_title">Explora partidos reales de las mejores ligas</h3>
+                <p class="showcase-description" data-i18n="sc1_desc">Navega por el calendario, filtra por liga y consulta las cuotas antes de hacer tu predicción. La Liga, Premier League, Serie A y más, todo en un solo lugar.</p>
                 <ul class="showcase-list">
-                    <li>Calendario interactivo por jornada</li>
-                    <li>Cuotas en tiempo real para cada partido</li>
-                    <li>Filtra por liga, estado y fecha</li>
+                    <li data-i18n="sc1_li1">Calendario interactivo por jornada</li>
+                    <li data-i18n="sc1_li2">Cuotas en tiempo real para cada partido</li>
+                    <li data-i18n="sc1_li3">Filtra por liga, estado y fecha</li>
                 </ul>
             </div>
             <div class="showcase-phone-wrap">
@@ -357,13 +362,13 @@
     <section class="showcase showcase-reverse">
         <div class="container showcase-row fade-in">
             <div class="showcase-text">
-                <p class="showcase-eyebrow">Apuestas</p>
-                <h3 class="showcase-title">Controla cada predicción que haces</h3>
-                <p class="showcase-description">Tu balance, tus apuestas activas, ganadas y perdidas. Todo visible de un vistazo con el retorno potencial de cada predicción.</p>
+                <p class="showcase-eyebrow" data-i18n="sc2_eyebrow">Apuestas</p>
+                <h3 class="showcase-title" data-i18n="sc2_title">Controla cada predicción que haces</h3>
+                <p class="showcase-description" data-i18n="sc2_desc">Tu balance, tus apuestas activas, ganadas y perdidas. Todo visible de un vistazo con el retorno potencial de cada predicción.</p>
                 <ul class="showcase-list">
-                    <li>Balance de SkillTokens siempre visible</li>
-                    <li>Historial completo de predicciones</li>
-                    <li>Retorno potencial calculado al instante</li>
+                    <li data-i18n="sc2_li1">Balance de SkillTokens siempre visible</li>
+                    <li data-i18n="sc2_li2">Historial completo de predicciones</li>
+                    <li data-i18n="sc2_li3">Retorno potencial calculado al instante</li>
                 </ul>
             </div>
             <div class="showcase-phone-wrap">
@@ -381,13 +386,13 @@
     <section class="showcase">
         <div class="container showcase-row showcase-row-dual fade-in">
             <div class="showcase-text">
-                <p class="showcase-eyebrow">Detalle del partido</p>
-                <h3 class="showcase-title">Cada dato que necesitas para predecir mejor</h3>
-                <p class="showcase-description">Alineaciones confirmadas, estadísticas en vivo, goles, tarjetas y eventos minuto a minuto. Toda la información para tomar la mejor decisión.</p>
+                <p class="showcase-eyebrow" data-i18n="sc3_eyebrow">Detalle del partido</p>
+                <h3 class="showcase-title" data-i18n="sc3_title">Cada dato que necesitas para predecir mejor</h3>
+                <p class="showcase-description" data-i18n="sc3_desc">Alineaciones confirmadas, estadísticas en vivo, goles, tarjetas y eventos minuto a minuto. Toda la información para tomar la mejor decisión.</p>
                 <ul class="showcase-list">
-                    <li>Alineaciones con formación táctica</li>
-                    <li>Estadísticas completas del partido</li>
-                    <li>Eventos en vivo minuto a minuto</li>
+                    <li data-i18n="sc3_li1">Alineaciones con formación táctica</li>
+                    <li data-i18n="sc3_li2">Estadísticas completas del partido</li>
+                    <li data-i18n="sc3_li3">Eventos en vivo minuto a minuto</li>
                 </ul>
             </div>
             <div class="showcase-phones-dual">
@@ -414,13 +419,13 @@
     <section class="showcase showcase-reverse">
         <div class="container showcase-row fade-in">
             <div class="showcase-text">
-                <p class="showcase-eyebrow">Comunidades</p>
-                <h3 class="showcase-title">Crea tu propia comunidad y compite con amigos</h3>
-                <p class="showcase-description">Personaliza tu comunidad con icono, nombre y cuota de entrada. Invita a tus amigos y cread ligas privadas donde solo vosotros competís.</p>
+                <p class="showcase-eyebrow" data-i18n="sc4_eyebrow">Comunidades</p>
+                <h3 class="showcase-title" data-i18n="sc4_title">Crea tu propia comunidad y compite con amigos</h3>
+                <p class="showcase-description" data-i18n="sc4_desc">Personaliza tu comunidad con icono, nombre y cuota de entrada. Invita a tus amigos y cread ligas privadas donde solo vosotros competís.</p>
                 <ul class="showcase-list">
-                    <li>Comunidades personalizables con icono</li>
-                    <li>Cuota de entrada en SkillTokens</li>
-                    <li>Ligas privadas dentro de cada comunidad</li>
+                    <li data-i18n="sc4_li1">Comunidades personalizables con icono</li>
+                    <li data-i18n="sc4_li2">Cuota de entrada en SkillTokens</li>
+                    <li data-i18n="sc4_li3">Ligas privadas dentro de cada comunidad</li>
                 </ul>
             </div>
             <div class="showcase-phone-wrap">
@@ -438,13 +443,13 @@
     <section class="showcase">
         <div class="container showcase-row fade-in">
             <div class="showcase-text">
-                <p class="showcase-eyebrow">Amigos</p>
-                <h3 class="showcase-title">Agrega a tus amigos y compite juntos</h3>
-                <p class="showcase-description">Busca a tus amigos por nombre de usuario, envía solicitudes y construye tu red de rivales. Comparte predicciones y demuestra quién sabe más.</p>
+                <p class="showcase-eyebrow" data-i18n="sc5_eyebrow">Amigos</p>
+                <h3 class="showcase-title" data-i18n="sc5_title">Agrega a tus amigos y compite juntos</h3>
+                <p class="showcase-description" data-i18n="sc5_desc">Busca a tus amigos por nombre de usuario, envía solicitudes y construye tu red de rivales. Comparte predicciones y demuestra quién sabe más.</p>
                 <ul class="showcase-list">
-                    <li>Busca y agrega amigos fácilmente</li>
-                    <li>Invita con enlace o código QR</li>
-                    <li>Compite directamente contra tus amigos</li>
+                    <li data-i18n="sc5_li1">Busca y agrega amigos fácilmente</li>
+                    <li data-i18n="sc5_li2">Invita con enlace o código QR</li>
+                    <li data-i18n="sc5_li3">Compite directamente contra tus amigos</li>
                 </ul>
             </div>
             <div class="showcase-phone-wrap">
@@ -462,13 +467,13 @@
     <section class="showcase showcase-reverse">
         <div class="container showcase-row fade-in">
             <div class="showcase-text">
-                <p class="showcase-eyebrow">Rankings</p>
-                <h3 class="showcase-title">Escala posiciones y demuestra tu habilidad</h3>
-                <p class="showcase-description">Consulta tu posición en el ranking global y en cada comunidad. Gana puntos con cada predicción acertada y presume de tu racha.</p>
+                <p class="showcase-eyebrow" data-i18n="sc6_eyebrow">Rankings</p>
+                <h3 class="showcase-title" data-i18n="sc6_title">Escala posiciones y demuestra tu habilidad</h3>
+                <p class="showcase-description" data-i18n="sc6_desc">Consulta tu posición en el ranking global y en cada comunidad. Gana puntos con cada predicción acertada y presume de tu racha.</p>
                 <ul class="showcase-list">
-                    <li>Ranking global en tiempo real</li>
-                    <li>Rankings por comunidad</li>
-                    <li>Sube posiciones con cada acierto</li>
+                    <li data-i18n="sc6_li1">Ranking global en tiempo real</li>
+                    <li data-i18n="sc6_li2">Rankings por comunidad</li>
+                    <li data-i18n="sc6_li3">Sube posiciones con cada acierto</li>
                 </ul>
             </div>
             <div class="showcase-phone-wrap">
@@ -484,32 +489,32 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow fade-in">El proceso</p>
-                <h2 class="section-title fade-in">Cómo funciona</h2>
-                <p class="section-subtitle fade-in">Empieza a competir en 3 simples pasos</p>
+                <p class="section-eyebrow fade-in" data-i18n="how_eyebrow">El proceso</p>
+                <h2 class="section-title fade-in" data-i18n="how_title">Cómo funciona</h2>
+                <p class="section-subtitle fade-in" data-i18n="how_subtitle">Empieza a competir en 3 simples pasos</p>
             </div>
 
             <div class="steps-container">
                 <div class="step fade-in">
                     <div class="step-number">1</div>
-                    <h3 class="step-title">Crea tu perfil</h3>
-                    <p class="step-description">Regístrate gratis, elige tu equipo favorito y recibe tus primeros SkillTokens de bienvenida.</p>
+                    <h3 class="step-title" data-i18n="step1_title">Crea tu perfil</h3>
+                    <p class="step-description" data-i18n="step1_desc">Regístrate gratis, elige tu equipo favorito y recibe tus primeros SkillTokens de bienvenida.</p>
                 </div>
 
                 <div class="step-connector fade-in"></div>
 
                 <div class="step fade-in">
                     <div class="step-number">2</div>
-                    <h3 class="step-title">Únete a una liga</h3>
-                    <p class="step-description">Crea una liga privada para tus amigos o únete a ligas públicas. Compite en comunidades activas.</p>
+                    <h3 class="step-title" data-i18n="step2_title">Únete a una liga</h3>
+                    <p class="step-description" data-i18n="step2_desc">Crea una liga privada para tus amigos o únete a ligas públicas. Compite en comunidades activas.</p>
                 </div>
 
                 <div class="step-connector fade-in"></div>
 
                 <div class="step fade-in">
                     <div class="step-number">3</div>
-                    <h3 class="step-title">Predice y gana</h3>
-                    <p class="step-description">Apuesta SkillTokens en partidos reales. Acumula puntos y escala en los rankings globales.</p>
+                    <h3 class="step-title" data-i18n="step3_title">Predice y gana</h3>
+                    <p class="step-description" data-i18n="step3_desc">Apuesta SkillTokens en partidos reales. Acumula puntos y escala en los rankings globales.</p>
                 </div>
             </div>
 
@@ -525,17 +530,17 @@
 
                 <div class="stat-item fade-in">
                     <span class="stat-number">10K+</span>
-                    <span class="stat-label">Usuarios activos</span>
+                    <span class="stat-label" data-i18n="stat_users">Usuarios activos</span>
                 </div>
 
                 <div class="stat-item fade-in">
                     <span class="stat-number">50K+</span>
-                    <span class="stat-label">Partidos predichos</span>
+                    <span class="stat-label" data-i18n="stat_matches">Partidos predichos</span>
                 </div>
 
                 <div class="stat-item fade-in">
                     <span class="stat-number">2.5K+</span>
-                    <span class="stat-label">Ligas creadas</span>
+                    <span class="stat-label" data-i18n="stat_leagues">Ligas creadas</span>
                 </div>
 
             </div>
@@ -548,8 +553,8 @@
     <section id="download" class="download">
         <div class="container">
             <div class="download-inner">
-                <h2 class="download-title fade-in">¿Listo para demostrar<br>tu habilidad?</h2>
-                <p class="download-subtitle fade-in">Descarga SkillBet gratis y únete a miles de aficionados al fútbol que ya compiten.</p>
+                <h2 class="download-title fade-in" data-i18n="download_title">¿Listo para demostrar<br>tu habilidad?</h2>
+                <p class="download-subtitle fade-in" data-i18n="download_subtitle">Descarga SkillBet gratis y únete a miles de aficionados al fútbol que ya compiten.</p>
                 <div class="download-buttons fade-in">
 
                     <a href="#" class="store-btn">
@@ -557,7 +562,7 @@
                             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                         </svg>
                         <div class="store-text">
-                            <span class="store-small">Descargar en</span>
+                            <span class="store-small" data-i18n="store_apple_small">Descargar en</span>
                             <span class="store-name">App Store</span>
                         </div>
                     </a>
@@ -567,7 +572,7 @@
                             <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                         </svg>
                         <div class="store-text">
-                            <span class="store-small">Disponible en</span>
+                            <span class="store-small" data-i18n="store_google_small">Disponible en</span>
                             <span class="store-name">Google Play</span>
                         </div>
                     </a>
@@ -588,31 +593,31 @@
                         <img src="resources/icon.png" alt="SkillBet" class="logo-icon">
                         <span class="logo-text">SkillBet</span>
                     </a>
-                    <p class="footer-description">Apuestas deportivas virtuales sin riesgo. Compite con habilidad, no con dinero.</p>
+                    <p class="footer-description" data-i18n="footer_desc">Apuestas deportivas virtuales sin riesgo. Compite con habilidad, no con dinero.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <span class="footer-heading">Producto</span>
-                        <a href="#features" class="footer-link">Características</a>
-                        <a href="#how-it-works" class="footer-link">Cómo funciona</a>
-                        <a href="#download" class="footer-link">Descargar</a>
+                        <span class="footer-heading" data-i18n="footer_col_product">Producto</span>
+                        <a href="#features" class="footer-link" data-i18n="footer_features">Características</a>
+                        <a href="#how-it-works" class="footer-link" data-i18n="footer_how">Cómo funciona</a>
+                        <a href="#download" class="footer-link" data-i18n="footer_download">Descargar</a>
                     </div>
                     <div class="footer-column">
-                        <span class="footer-heading">Legal</span>
-                        <a href="#" class="footer-link">Términos de uso</a>
-                        <a href="#" class="footer-link">Política de privacidad</a>
-                        <a href="#" class="footer-link">Juego responsable</a>
+                        <span class="footer-heading" data-i18n="footer_col_legal">Legal</span>
+                        <a href="#" class="footer-link" data-i18n="footer_terms">Términos de uso</a>
+                        <a href="#" class="footer-link" data-i18n="footer_privacy">Política de privacidad</a>
+                        <a href="#" class="footer-link" data-i18n="footer_responsible">Juego responsable</a>
                     </div>
                     <div class="footer-column">
-                        <span class="footer-heading">Contacto</span>
+                        <span class="footer-heading" data-i18n="footer_col_contact">Contacto</span>
                         <a href="mailto:info@skillbet.app" class="footer-link">info@skillbet.app</a>
-                        <a href="#" class="footer-link">Soporte</a>
+                        <a href="#" class="footer-link" data-i18n="footer_support">Soporte</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 SkillBet. Todos los derechos reservados.</p>
-                <p class="disclaimer">SkillBet es una aplicación de entretenimiento. No involucra dinero real ni apuestas con valor monetario.</p>
+                <p class="copyright" data-i18n="footer_copyright">&copy; 2026 SkillBet. Todos los derechos reservados.</p>
+                <p class="disclaimer" data-i18n="footer_disclaimer">SkillBet es una aplicación de entretenimiento. No involucra dinero real ni apuestas con valor monetario.</p>
             </div>
         </div>
     </footer>
@@ -624,7 +629,323 @@
          JavaScript
     ══════════════════════════════════════════════ -->
     <script>
-        // Scroll-reveal via IntersectionObserver
+        // ── i18n translations ────────────────────────────────────
+        var translations = {
+            es: {
+                // Launch bar
+                launch_bar_text:        '🚀 Lanzamiento oficial el <strong>22 de Marzo</strong> —',
+                launch_bar_cta:         'Inscríbete gratis',
+                // Navbar
+                nav_novedades:          'Novedades',
+                nav_features:           'Características',
+                nav_how:                'Cómo funciona',
+                nav_download:           'Descargar',
+                nav_cta:                'Descargar App',
+                // Hero
+                hero_badge:             '<span class="badge-dot"></span>Sin dinero real &middot; Sin riesgo',
+                hero_title:             'Demuestra tu <span class="text-gradient">habilidad</span><br>prediciendo fútbol',
+                hero_subtitle:          'Compite con amigos en ligas privadas, predice resultados reales y escala en los rankings. Todo con tokens virtuales.',
+                hero_cta_download:      'Descargar App',
+                hero_cta_remind:        'Inscríbete al lanzamiento',
+                hero_correct_prediction:'¡Predicción correcta!',
+                // Novedades section
+                novedades_eyebrow:      'Novedades',
+                novedades_title:        'Lo último de SkillBet',
+                // Launch card
+                launch_eyebrow:         'Próximamente',
+                launch_title:           'Lanzamiento Oficial',
+                launch_subtitle:        'La app llega a iOS y Android',
+                launch_date_label:      'Fecha de lanzamiento',
+                launch_date_value:      '22 Marzo 2026',
+                countdown_days:         'Días',
+                countdown_hours:        'Horas',
+                countdown_minutes:      'Min',
+                countdown_seconds:      'Seg',
+                launch_remind_btn:      'Recuérdame el lanzamiento',
+                // Airdrop card
+                airdrop_chart_slogan:   '🚀 Skyrocketing soon',
+                airdrop_title:          'Airdrop de la Comunidad SkillBet',
+                airdrop_subtitle:       '¡Únete pronto y gana SkillTokens gratis!',
+                airdrop_earn_label:     'Puedes ganar hasta',
+                airdrop_participants_label: 'Participantes Actuales',
+                airdrop_task_download:  'Descargar la App',
+                airdrop_task_download_reward: 'Gana <strong>500</strong> SkillTokens',
+                airdrop_task_account:   'Crear una Cuenta',
+                airdrop_task_account_reward: 'Gana <strong>300</strong> SkillTokens',
+                airdrop_task_wallet:    'Conectar tu Wallet',
+                airdrop_task_wallet_reward: 'Gana <strong>200</strong> SkillTokens',
+                airdrop_task_pending:   'Pendiente',
+                airdrop_task_invite:    'Invitar Amigos',
+                airdrop_task_invite_reward: 'Gana <strong>400</strong> SkillTokens',
+                airdrop_cta:            'RECLAMAR TUS TOKENS',
+                airdrop_disclaimer:     'Oferta por tiempo limitado &middot; Recompensas por orden de llegada',
+                // Features intro
+                features_eyebrow:       'Descubre la app',
+                features_title:         'Todo lo que necesitas<br>para competir',
+                features_subtitle:      'Cada función diseñada para que vivas la emoción del fútbol de una forma única.',
+                // Showcase 1 – Partidos
+                sc1_eyebrow:            'Partidos',
+                sc1_title:              'Explora partidos reales de las mejores ligas',
+                sc1_desc:               'Navega por el calendario, filtra por liga y consulta las cuotas antes de hacer tu predicción. La Liga, Premier League, Serie A y más, todo en un solo lugar.',
+                sc1_li1:                'Calendario interactivo por jornada',
+                sc1_li2:                'Cuotas en tiempo real para cada partido',
+                sc1_li3:                'Filtra por liga, estado y fecha',
+                // Showcase 2 – Apuestas
+                sc2_eyebrow:            'Apuestas',
+                sc2_title:              'Controla cada predicción que haces',
+                sc2_desc:               'Tu balance, tus apuestas activas, ganadas y perdidas. Todo visible de un vistazo con el retorno potencial de cada predicción.',
+                sc2_li1:                'Balance de SkillTokens siempre visible',
+                sc2_li2:                'Historial completo de predicciones',
+                sc2_li3:                'Retorno potencial calculado al instante',
+                // Showcase 3 – Detalle
+                sc3_eyebrow:            'Detalle del partido',
+                sc3_title:              'Cada dato que necesitas para predecir mejor',
+                sc3_desc:               'Alineaciones confirmadas, estadísticas en vivo, goles, tarjetas y eventos minuto a minuto. Toda la información para tomar la mejor decisión.',
+                sc3_li1:                'Alineaciones con formación táctica',
+                sc3_li2:                'Estadísticas completas del partido',
+                sc3_li3:                'Eventos en vivo minuto a minuto',
+                // Showcase 4 – Comunidades
+                sc4_eyebrow:            'Comunidades',
+                sc4_title:              'Crea tu propia comunidad y compite con amigos',
+                sc4_desc:               'Personaliza tu comunidad con icono, nombre y cuota de entrada. Invita a tus amigos y cread ligas privadas donde solo vosotros competís.',
+                sc4_li1:                'Comunidades personalizables con icono',
+                sc4_li2:                'Cuota de entrada en SkillTokens',
+                sc4_li3:                'Ligas privadas dentro de cada comunidad',
+                // Showcase 5 – Amigos
+                sc5_eyebrow:            'Amigos',
+                sc5_title:              'Agrega a tus amigos y compite juntos',
+                sc5_desc:               'Busca a tus amigos por nombre de usuario, envía solicitudes y construye tu red de rivales. Comparte predicciones y demuestra quién sabe más.',
+                sc5_li1:                'Busca y agrega amigos fácilmente',
+                sc5_li2:                'Invita con enlace o código QR',
+                sc5_li3:                'Compite directamente contra tus amigos',
+                // Showcase 6 – Rankings
+                sc6_eyebrow:            'Rankings',
+                sc6_title:              'Escala posiciones y demuestra tu habilidad',
+                sc6_desc:               'Consulta tu posición en el ranking global y en cada comunidad. Gana puntos con cada predicción acertada y presume de tu racha.',
+                sc6_li1:                'Ranking global en tiempo real',
+                sc6_li2:                'Rankings por comunidad',
+                sc6_li3:                'Sube posiciones con cada acierto',
+                // How it works
+                how_eyebrow:            'El proceso',
+                how_title:              'Cómo funciona',
+                how_subtitle:           'Empieza a competir en 3 simples pasos',
+                step1_title:            'Crea tu perfil',
+                step1_desc:             'Regístrate gratis, elige tu equipo favorito y recibe tus primeros SkillTokens de bienvenida.',
+                step2_title:            'Únete a una liga',
+                step2_desc:             'Crea una liga privada para tus amigos o únete a ligas públicas. Compite en comunidades activas.',
+                step3_title:            'Predice y gana',
+                step3_desc:             'Apuesta SkillTokens en partidos reales. Acumula puntos y escala en los rankings globales.',
+                // Stats
+                stat_users:             'Usuarios activos',
+                stat_matches:           'Partidos predichos',
+                stat_leagues:           'Ligas creadas',
+                // Download
+                download_title:         '¿Listo para demostrar<br>tu habilidad?',
+                download_subtitle:      'Descarga SkillBet gratis y únete a miles de aficionados al fútbol que ya compiten.',
+                store_apple_small:      'Descargar en',
+                store_google_small:     'Disponible en',
+                // Footer
+                footer_desc:            'Apuestas deportivas virtuales sin riesgo. Compite con habilidad, no con dinero.',
+                footer_col_product:     'Producto',
+                footer_features:        'Características',
+                footer_how:             'Cómo funciona',
+                footer_download:        'Descargar',
+                footer_col_legal:       'Legal',
+                footer_terms:           'Términos de uso',
+                footer_privacy:         'Política de privacidad',
+                footer_responsible:     'Juego responsable',
+                footer_col_contact:     'Contacto',
+                footer_support:         'Soporte',
+                footer_copyright:       '&copy; 2026 SkillBet. Todos los derechos reservados.',
+                footer_disclaimer:      'SkillBet es una aplicación de entretenimiento. No involucra dinero real ni apuestas con valor monetario.',
+                // Modal
+                modal_title:            'Recuérdame el lanzamiento',
+                modal_text:             'Te avisamos el día que SkillBet llegue a iOS y Android. Sin spam, solo un aviso.',
+                modal_placeholder:      'tu@email.com',
+                modal_submit:           'Avisarme el día del lanzamiento',
+                modal_sending:          'Enviando...',
+                modal_success:          '¡Listo! Te avisamos el día del lanzamiento.',
+                modal_error_generic:    'Algo salió mal. Inténtalo de nuevo.',
+                modal_error_connection: 'Error de conexión. Inténtalo de nuevo.',
+                modal_close_label:      'Cerrar'
+            },
+            en: {
+                // Launch bar
+                launch_bar_text:        '🚀 Official launch on <strong>March 22nd</strong> —',
+                launch_bar_cta:         'Sign up free',
+                // Navbar
+                nav_novedades:          'News',
+                nav_features:           'Features',
+                nav_how:                'How it works',
+                nav_download:           'Download',
+                nav_cta:                'Download App',
+                // Hero
+                hero_badge:             '<span class="badge-dot"></span>No real money &middot; No risk',
+                hero_title:             'Prove your <span class="text-gradient">skill</span><br>predicting football',
+                hero_subtitle:          'Compete with friends in private leagues, predict real match results and climb the rankings. All with virtual tokens.',
+                hero_cta_download:      'Download App',
+                hero_cta_remind:        'Sign up for launch',
+                hero_correct_prediction:'Correct prediction!',
+                // Novedades section
+                novedades_eyebrow:      'News',
+                novedades_title:        'Latest from SkillBet',
+                // Launch card
+                launch_eyebrow:         'Coming soon',
+                launch_title:           'Official Launch',
+                launch_subtitle:        'The app arrives on iOS and Android',
+                launch_date_label:      'Launch date',
+                launch_date_value:      'March 22, 2026',
+                countdown_days:         'Days',
+                countdown_hours:        'Hours',
+                countdown_minutes:      'Min',
+                countdown_seconds:      'Sec',
+                launch_remind_btn:      'Remind me of the launch',
+                // Airdrop card
+                airdrop_chart_slogan:   '🚀 Skyrocketing soon',
+                airdrop_title:          'SkillBet Community Airdrop',
+                airdrop_subtitle:       'Join soon and earn free SkillTokens!',
+                airdrop_earn_label:     'You can earn up to',
+                airdrop_participants_label: 'Current Participants',
+                airdrop_task_download:  'Download the App',
+                airdrop_task_download_reward: 'Earn <strong>500</strong> SkillTokens',
+                airdrop_task_account:   'Create an Account',
+                airdrop_task_account_reward: 'Earn <strong>300</strong> SkillTokens',
+                airdrop_task_wallet:    'Connect your Wallet',
+                airdrop_task_wallet_reward: 'Earn <strong>200</strong> SkillTokens',
+                airdrop_task_pending:   'Pending',
+                airdrop_task_invite:    'Invite Friends',
+                airdrop_task_invite_reward: 'Earn <strong>400</strong> SkillTokens',
+                airdrop_cta:            'CLAIM YOUR TOKENS',
+                airdrop_disclaimer:     'Limited time offer &middot; Rewards on a first-come basis',
+                // Features intro
+                features_eyebrow:       'Discover the app',
+                features_title:         'Everything you need<br>to compete',
+                features_subtitle:      'Every feature designed so you can experience football excitement in a unique way.',
+                // Showcase 1 – Matches
+                sc1_eyebrow:            'Matches',
+                sc1_title:              'Explore real matches from the best leagues',
+                sc1_desc:               'Browse the schedule, filter by league and check odds before making your prediction. La Liga, Premier League, Serie A and more, all in one place.',
+                sc1_li1:                'Interactive matchday calendar',
+                sc1_li2:                'Real-time odds for every match',
+                sc1_li3:                'Filter by league, status and date',
+                // Showcase 2 – Bets
+                sc2_eyebrow:            'Bets',
+                sc2_title:              'Track every prediction you make',
+                sc2_desc:               'Your balance, active bets, wins and losses. All visible at a glance with the potential return for each prediction.',
+                sc2_li1:                'SkillToken balance always visible',
+                sc2_li2:                'Full prediction history',
+                sc2_li3:                'Potential return calculated instantly',
+                // Showcase 3 – Match detail
+                sc3_eyebrow:            'Match detail',
+                sc3_title:              'Every stat you need to predict better',
+                sc3_desc:               'Confirmed lineups, live statistics, goals, cards and minute-by-minute events. All the information to make the best decision.',
+                sc3_li1:                'Lineups with tactical formation',
+                sc3_li2:                'Full match statistics',
+                sc3_li3:                'Live events minute by minute',
+                // Showcase 4 – Communities
+                sc4_eyebrow:            'Communities',
+                sc4_title:              'Create your own community and compete with friends',
+                sc4_desc:               'Customize your community with icon, name and entry fee. Invite your friends and create private leagues where only you compete.',
+                sc4_li1:                'Customizable communities with icon',
+                sc4_li2:                'Entry fee in SkillTokens',
+                sc4_li3:                'Private leagues within each community',
+                // Showcase 5 – Friends
+                sc5_eyebrow:            'Friends',
+                sc5_title:              'Add your friends and compete together',
+                sc5_desc:               'Search for friends by username, send requests and build your rival network. Share predictions and prove who knows more.',
+                sc5_li1:                'Find and add friends easily',
+                sc5_li2:                'Invite with link or QR code',
+                sc5_li3:                'Compete directly against your friends',
+                // Showcase 6 – Rankings
+                sc6_eyebrow:            'Rankings',
+                sc6_title:              'Climb the leaderboard and prove your skill',
+                sc6_desc:               'Check your position in the global ranking and in each community. Earn points with every correct prediction and show off your streak.',
+                sc6_li1:                'Global ranking in real time',
+                sc6_li2:                'Rankings per community',
+                sc6_li3:                'Move up with every correct pick',
+                // How it works
+                how_eyebrow:            'The process',
+                how_title:              'How it works',
+                how_subtitle:           'Start competing in 3 simple steps',
+                step1_title:            'Create your profile',
+                step1_desc:             'Sign up free, choose your favourite team and receive your first welcome SkillTokens.',
+                step2_title:            'Join a league',
+                step2_desc:             'Create a private league for your friends or join public leagues. Compete in active communities.',
+                step3_title:            'Predict and win',
+                step3_desc:             'Bet SkillTokens on real matches. Accumulate points and climb the global rankings.',
+                // Stats
+                stat_users:             'Active users',
+                stat_matches:           'Matches predicted',
+                stat_leagues:           'Leagues created',
+                // Download
+                download_title:         'Ready to prove<br>your skill?',
+                download_subtitle:      'Download SkillBet for free and join thousands of football fans already competing.',
+                store_apple_small:      'Download on the',
+                store_google_small:     'Get it on',
+                // Footer
+                footer_desc:            'Risk-free virtual sports betting. Compete with skill, not money.',
+                footer_col_product:     'Product',
+                footer_features:        'Features',
+                footer_how:             'How it works',
+                footer_download:        'Download',
+                footer_col_legal:       'Legal',
+                footer_terms:           'Terms of use',
+                footer_privacy:         'Privacy policy',
+                footer_responsible:     'Responsible gaming',
+                footer_col_contact:     'Contact',
+                footer_support:         'Support',
+                footer_copyright:       '&copy; 2026 SkillBet. All rights reserved.',
+                footer_disclaimer:      'SkillBet is an entertainment application. It does not involve real money or monetary-value bets.',
+                // Modal
+                modal_title:            'Remind me of the launch',
+                modal_text:             'We\'ll notify you the day SkillBet arrives on iOS and Android. No spam, just one notification.',
+                modal_placeholder:      'your@email.com',
+                modal_submit:           'Notify me on launch day',
+                modal_sending:          'Sending...',
+                modal_success:          'Done! We\'ll notify you on launch day.',
+                modal_error_generic:    'Something went wrong. Please try again.',
+                modal_error_connection: 'Connection error. Please try again.',
+                modal_close_label:      'Close'
+            }
+        };
+
+        // ── Language switching logic ──────────────────────────────
+        var currentLang = localStorage.getItem('sb-lang') || 'es';
+
+        function applyLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('sb-lang', lang);
+            document.documentElement.lang = lang;
+
+            var t = translations[lang];
+
+            // Update all data-i18n elements
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) {
+                    el.innerHTML = t[key];
+                }
+            });
+
+            // Update toggle button states
+            var btnEs = document.getElementById('lang-btn-es');
+            var btnEn = document.getElementById('lang-btn-en');
+            if (btnEs && btnEn) {
+                btnEs.classList.toggle('active', lang === 'es');
+                btnEn.classList.toggle('active', lang === 'en');
+                btnEs.setAttribute('aria-pressed', lang === 'es' ? 'true' : 'false');
+                btnEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+            }
+        }
+
+        function setLang(lang) {
+            applyLang(lang);
+        }
+
+        // Apply on page load
+        applyLang(currentLang);
+
+        // ── Scroll-reveal via IntersectionObserver ────────────────
         (function () {
             var observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
@@ -654,7 +975,7 @@
             }
         }
 
-        // Countdown to launch
+        // ── Countdown to launch ───────────────────────────────────
         (function () {
             var LAUNCH_DATE = new Date('2026-03-22T00:00:00').getTime();
             function pad(n) { return n < 10 ? '0' + n : n; }
@@ -677,7 +998,7 @@
             setInterval(tick, 1000);
         })();
 
-        // Navbar background intensifies on scroll
+        // ── Navbar background intensifies on scroll ───────────────
         (function () {
             var navbar = document.querySelector('.navbar');
             window.addEventListener('scroll', function () {
@@ -689,19 +1010,20 @@
             }, { passive: true });
         })();
 
-        // Modal: Recuérdame el lanzamiento
+        // ── Modal: reminder ───────────────────────────────────────
         function openReminderModal() {
+            var t = translations[currentLang];
             var container = document.getElementById('modal-container');
             container.innerHTML = [
                 '<div class="modal-overlay" onclick="if(event.target===this)closeModal()">',
                 '  <div class="modal-content">',
-                '    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">&times;</button>',
+                '    <button class="modal-close" onclick="closeModal()" aria-label="' + t.modal_close_label + '">&times;</button>',
                 '    <div class="modal-icon">🚀</div>',
-                '    <h2 class="modal-title">Recuérdame el lanzamiento</h2>',
-                '    <p class="modal-text">Te avisamos el día que SkillBet llegue a iOS y Android. Sin spam, solo un aviso.</p>',
+                '    <h2 class="modal-title">' + t.modal_title + '</h2>',
+                '    <p class="modal-text">' + t.modal_text + '</p>',
                 '    <form id="reminder-form" onsubmit="submitReminder(event)">',
-                '      <input type="email" id="reminder-email" class="modal-input" placeholder="tu@email.com" required autocomplete="email">',
-                '      <button type="submit" class="btn btn-primary modal-submit" id="reminder-btn">Avisarme el día del lanzamiento</button>',
+                '      <input type="email" id="reminder-email" class="modal-input" placeholder="' + t.modal_placeholder + '" required autocomplete="email">',
+                '      <button type="submit" class="btn btn-primary modal-submit" id="reminder-btn">' + t.modal_submit + '</button>',
                 '      <p id="reminder-msg" class="modal-msg"></p>',
                 '    </form>',
                 '  </div>',
@@ -712,11 +1034,12 @@
 
         function submitReminder(e) {
             e.preventDefault();
+            var t = translations[currentLang];
             var email = document.getElementById('reminder-email').value;
             var btn   = document.getElementById('reminder-btn');
             var msg   = document.getElementById('reminder-msg');
             btn.disabled = true;
-            btn.textContent = 'Enviando...';
+            btn.textContent = t.modal_sending;
             fetch('https://formspree.io/f/meerkpzy', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -726,17 +1049,17 @@
             .then(function(data) {
                 if (data.ok) {
                     document.getElementById('reminder-form').innerHTML =
-                        '<div class="modal-success"><span>✅</span><p>¡Listo! Te avisamos el día del lanzamiento.</p></div>';
+                        '<div class="modal-success"><span>✅</span><p>' + t.modal_success + '</p></div>';
                 } else {
-                    msg.textContent = 'Algo salió mal. Inténtalo de nuevo.';
+                    msg.textContent = t.modal_error_generic;
                     btn.disabled = false;
-                    btn.textContent = 'Avisarme el día del lanzamiento';
+                    btn.textContent = t.modal_submit;
                 }
             })
             .catch(function() {
-                msg.textContent = 'Error de conexión. Inténtalo de nuevo.';
+                msg.textContent = t.modal_error_connection;
                 btn.disabled = false;
-                btn.textContent = 'Avisarme el día del lanzamiento';
+                btn.textContent = t.modal_submit;
             });
         }
     </script>
