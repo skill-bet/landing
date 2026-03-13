@@ -212,6 +212,32 @@ img {
     background: rgba(255,130,0,1);
 }
 
+.launch-bar-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 6px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(255,255,255,0.12);
+}
+
+.lb-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.2s;
+}
+
+.lb-social:hover {
+    color: #fff;
+}
+
+.lb-social-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
 /* ── Navigation ─────────────────────────────────────────── */
 .navbar {
     position: fixed;
