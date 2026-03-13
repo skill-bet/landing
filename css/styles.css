@@ -509,7 +509,7 @@ img {
 }
 
 .showcase:nth-child(even) {
-    background: var(--surface);
+    background: var(--background);
 }
 
 .showcase-row {
