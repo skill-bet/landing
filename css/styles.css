@@ -1297,14 +1297,34 @@ img {
 
 .airdrop-chart-coin {
     position: absolute;
-    width: 220px;
-    height: 220px;
-    top: -30px;
+    width: 150px;
+    height: 150px;
+    top: -10px;
     right: 5px;
     object-fit: contain;
     opacity: 0.28;
     pointer-events: none;
     z-index: 1;
+}
+
+.airdrop-chart-label {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: -8px 0 12px;
+}
+
+.airdrop-chart-ticker {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+
+.airdrop-chart-slogan {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 107, 0, 0.9);
 }
 
 .airdrop-chart-svg {
