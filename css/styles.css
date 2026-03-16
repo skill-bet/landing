@@ -1689,6 +1689,48 @@ img {
     }
 }
 
+@media (max-width: 600px) {
+    .launch-bar {
+        height: auto;
+        min-height: 40px;
+        padding: 5px 12px;
+        flex-wrap: wrap;
+        white-space: normal;
+        gap: 4px 10px;
+        justify-content: center;
+    }
+
+    .launch-bar-text {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .launch-bar-countdown {
+        font-size: 12px;
+    }
+
+    .lb-unit {
+        font-size: 12px;
+    }
+
+    .launch-bar-cta {
+        padding: 3px 12px;
+        font-size: 11px;
+    }
+
+    .launch-bar-socials {
+        display: none;
+    }
+
+    .navbar {
+        top: 66px;
+    }
+
+    .hero {
+        padding-top: calc(66px + 48px);
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
