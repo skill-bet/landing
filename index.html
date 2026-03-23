@@ -325,42 +325,51 @@
                 <!-- Meme Coin -->
                 <div class="novedad-card novedad-memecoin fade-in">
                     <div class="memecoin-logo-wrap">
-                        <svg class="memecoin-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="$SBET Meme Coin">
+                        <svg class="memecoin-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Pump.fun coin">
                             <defs>
-                                <radialGradient id="coinBg" cx="40%" cy="35%" r="65%">
-                                    <stop offset="0%" stop-color="#00ff99"/>
-                                    <stop offset="55%" stop-color="#00c878"/>
-                                    <stop offset="100%" stop-color="#007a45"/>
+                                <radialGradient id="pf-gold" cx="38%" cy="28%" r="72%">
+                                    <stop offset="0%"   stop-color="#FFF0A0"/>
+                                    <stop offset="45%"  stop-color="#FFB800"/>
+                                    <stop offset="100%" stop-color="#C87000"/>
                                 </radialGradient>
-                                <radialGradient id="coinShine" cx="35%" cy="30%" r="50%">
-                                    <stop offset="0%" stop-color="rgba(255,255,255,0.45)"/>
-                                    <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                                <radialGradient id="pf-edge" cx="50%" cy="60%" r="55%">
+                                    <stop offset="0%"   stop-color="#A06000"/>
+                                    <stop offset="100%" stop-color="#5A3000"/>
                                 </radialGradient>
-                                <filter id="coinShadow">
-                                    <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#00c878" flood-opacity="0.55"/>
+                                <radialGradient id="pf-green" cx="32%" cy="25%" r="70%">
+                                    <stop offset="0%"   stop-color="#90EE90"/>
+                                    <stop offset="100%" stop-color="#2E8B2E"/>
+                                </radialGradient>
+                                <radialGradient id="pf-white" cx="65%" cy="25%" r="60%">
+                                    <stop offset="0%"   stop-color="#FFFFFF"/>
+                                    <stop offset="100%" stop-color="#BBBBBB"/>
+                                </radialGradient>
+                                <filter id="pf-drop" x="-25%" y="-25%" width="150%" height="150%">
+                                    <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
                                 </filter>
+                                <clipPath id="pf-lh"><rect x="0"   y="0" width="100" height="200"/></clipPath>
+                                <clipPath id="pf-rh"><rect x="100" y="0" width="100" height="200"/></clipPath>
                             </defs>
-                            <!-- Outer ring -->
-                            <circle cx="100" cy="100" r="96" fill="#005530" filter="url(#coinShadow)"/>
+                            <!-- 3-D coin depth (offset shadow) -->
+                            <circle cx="105" cy="108" r="88" fill="url(#pf-edge)"/>
                             <!-- Coin face -->
-                            <circle cx="100" cy="100" r="88" fill="url(#coinBg)"/>
-                            <!-- Shine overlay -->
-                            <circle cx="100" cy="100" r="88" fill="url(#coinShine)"/>
-                            <!-- Inner border -->
-                            <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
-                            <!-- Pump.fun frog-style mouth curve -->
-                            <path d="M62 118 Q100 145 138 118" fill="none" stroke="rgba(0,60,30,0.5)" stroke-width="4" stroke-linecap="round"/>
-                            <!-- Eyes -->
-                            <circle cx="74" cy="95" r="10" fill="rgba(0,60,30,0.45)"/>
-                            <circle cx="126" cy="95" r="10" fill="rgba(0,60,30,0.45)"/>
-                            <circle cx="76" cy="93" r="4" fill="#fff"/>
-                            <circle cx="128" cy="93" r="4" fill="#fff"/>
-                            <!-- $SBET text -->
-                            <text x="100" y="72" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" fill="rgba(0,60,30,0.7)" text-anchor="middle" letter-spacing="1">$SBET</text>
-                            <!-- Pump.fun label bottom -->
-                            <text x="100" y="162" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" fill="rgba(0,60,30,0.55)" text-anchor="middle" letter-spacing="0.5">pump.fun</text>
-                            <!-- Fire emoji area (simple flames) -->
-                            <text x="100" y="52" font-family="serif" font-size="22" text-anchor="middle">🔥</text>
+                            <circle cx="100" cy="100" r="88" fill="url(#pf-gold)" filter="url(#pf-drop)"/>
+                            <!-- Inner groove -->
+                            <circle cx="100" cy="100" r="81" fill="none" stroke="rgba(160,90,0,0.45)" stroke-width="2.5"/>
+                            <!-- PUMP.FUN text -->
+                            <text x="100" y="54" font-family="'Arial Black',Arial,sans-serif" font-size="16" font-weight="900" fill="#1A0800" text-anchor="middle" letter-spacing="2">PUMP.FUN</text>
+                            <!-- Pill shadow/outline -->
+                            <rect x="40" y="98" width="120" height="58" rx="29" fill="#1A0800"/>
+                            <!-- Pill green left half -->
+                            <rect x="42" y="100" width="116" height="54" rx="27" fill="url(#pf-green)" clip-path="url(#pf-lh)"/>
+                            <!-- Pill white right half -->
+                            <rect x="42" y="100" width="116" height="54" rx="27" fill="url(#pf-white)" clip-path="url(#pf-rh)"/>
+                            <!-- Centre divider -->
+                            <rect x="97" y="100" width="6" height="54" fill="#1A0800"/>
+                            <!-- Pill shine -->
+                            <ellipse cx="74" cy="112" rx="22" ry="8" fill="rgba(255,255,255,0.42)" transform="rotate(-20,74,112)"/>
+                            <!-- Coin top shine -->
+                            <ellipse cx="72" cy="66" rx="30" ry="11" fill="rgba(255,255,255,0.25)" transform="rotate(-18,72,66)"/>
                         </svg>
                     </div>
                     <p class="novedad-eyebrow memecoin-eyebrow">🔥 Pump.fun · Meme Coin</p>
