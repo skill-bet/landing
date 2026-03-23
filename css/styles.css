@@ -1071,11 +1071,77 @@ img {
     background: var(--surface);
 }
 
+.novedades-carousel {
+    position: relative;
+}
+
 .novedades-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     align-items: stretch;
+    padding-bottom: 4px;
+}
+
+.novedades-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.novedades-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.nd-arrow {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-secondary);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+
+.nd-arrow:hover {
+    background: rgba(255,107,0,0.15);
+    color: var(--primary);
+    border-color: rgba(255,107,0,0.3);
+}
+
+.novedades-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nd-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.nd-dot.active {
+    background: var(--primary);
+    transform: scale(1.3);
 }
 
 .novedad-card {
@@ -1086,6 +1152,9 @@ img {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 0 0 calc(50% - 12px);
+    scroll-snap-align: start;
+    min-width: 300px;
 }
 
 .novedad-card-icon {
@@ -1387,11 +1456,111 @@ img {
     50%       { transform: translateY(-8px); }
 }
 
+/* ── Meme Coin card ── */
+.novedad-memecoin {
+    border-color: rgba(0, 200, 120, 0.2);
+    background: linear-gradient(160deg, #000 70%, rgba(0,200,120,0.05) 100%);
+}
 
+.memecoin-logo-wrap {
+    position: relative;
+    width: calc(100% + 80px);
+    margin: -40px -40px 0;
+    overflow: hidden;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(0,200,120,0.08) 0%, transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0 12px;
+    min-height: 200px;
+}
+
+.memecoin-logo {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 32px rgba(0,200,120,0.35));
+    animation: memeFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes memeFloat {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50%       { transform: translateY(-10px) rotate(1deg); }
+}
+
+.memecoin-eyebrow {
+    color: #00c878 !important;
+}
+
+.memecoin-launch-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(0,200,120,0.06);
+    border-radius: 12px;
+    padding: 14px 18px;
+    border: 1px solid rgba(0,200,120,0.2);
+}
+
+.memecoin-launch-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.memecoin-launch-value {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #00c878, #00ffaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.memecoin-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.memecoin-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.memecoin-feature-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.btn-memecoin {
+    background: linear-gradient(135deg, #00c878, #00a860);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    text-align: center;
+    margin-top: auto;
+}
+
+.btn-memecoin:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
 
 @media (max-width: 768px) {
-    .novedades-grid {
-        grid-template-columns: 1fr;
+    .novedad-card {
+        flex: 0 0 82vw;
     }
 
     .airdrop-tasks {

@@ -128,7 +128,8 @@
                 <h2 class="section-title fade-in" data-i18n="novedades_title">Lo último de SkillBet</h2>
             </div>
 
-            <div class="novedades-grid">
+            <div class="novedades-carousel">
+            <div class="novedades-grid" id="novedades-track">
 
                 <!-- Lanzamiento -->
                 <div class="novedad-card fade-in">
@@ -321,7 +322,51 @@
                     <p class="airdrop-disclaimer" data-i18n="airdrop_disclaimer">Oferta por tiempo limitado &middot; Recompensas por orden de llegada</p>
                 </div>
 
+                <!-- Meme Coin -->
+                <div class="novedad-card novedad-memecoin fade-in">
+                    <div class="memecoin-logo-wrap">
+                        <img src="resources/skillbet-meme.png" alt="SkillBet Meme Coin" class="memecoin-logo">
+                    </div>
+                    <p class="novedad-eyebrow memecoin-eyebrow">🔥 Pump.fun · Meme Coin</p>
+                    <h3 class="novedad-title">$SBET llega a Pump.fun</h3>
+                    <p class="novedad-subtitle">La meme coin oficial del ecosistema SkillBet. Lanzamiento con airdrop exclusivo para la comunidad.</p>
+
+                    <div class="memecoin-launch-box">
+                        <span class="memecoin-launch-label">Lanzamiento estimado</span>
+                        <span class="memecoin-launch-value">6 Abril 2026</span>
+                    </div>
+
+                    <div class="memecoin-features">
+                        <div class="memecoin-feature">
+                            <span class="memecoin-feature-icon">🎁</span>
+                            <span>Airdrop exclusivo para la comunidad SkillBet</span>
+                        </div>
+                        <div class="memecoin-feature">
+                            <span class="memecoin-feature-icon">🚀</span>
+                            <span>Listing en Pump.fun desde el primer día</span>
+                        </div>
+                        <div class="memecoin-feature">
+                            <span class="memecoin-feature-icon">💎</span>
+                            <span>Bonus especial para early holders</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openReminderModal()" class="btn-memecoin">🔥 Avísame del lanzamiento</button>
+                </div>
+
+            </div><!-- /novedades-grid -->
+
+            <div class="novedades-nav">
+                <button class="nd-arrow nd-prev" onclick="novedadesScroll(-1)" aria-label="Anterior">&#8249;</button>
+                <div class="novedades-dots" id="novedades-dots">
+                    <button class="nd-dot active" onclick="novedadesGoto(0)"></button>
+                    <button class="nd-dot" onclick="novedadesGoto(1)"></button>
+                    <button class="nd-dot" onclick="novedadesGoto(2)"></button>
+                </div>
+                <button class="nd-arrow nd-next" onclick="novedadesScroll(1)" aria-label="Siguiente">&#8250;</button>
             </div>
+
+            </div><!-- /novedades-carousel -->
         </div>
     </section>
 
@@ -1066,6 +1111,39 @@
                 btn.textContent = t.modal_submit;
             });
         }
+
+        /* ── Novedades carousel ── */
+        (function () {
+            var track = document.getElementById('novedades-track');
+            var dots  = document.querySelectorAll('#novedades-dots .nd-dot');
+            if (!track) return;
+
+            function getCardWidth() {
+                var card = track.querySelector('.novedad-card');
+                if (!card) return 0;
+                var gap = 24;
+                return card.offsetWidth + gap;
+            }
+
+            function updateDots() {
+                var idx = Math.round(track.scrollLeft / getCardWidth());
+                dots.forEach(function (d, i) {
+                    d.classList.toggle('active', i === idx);
+                });
+            }
+
+            track.addEventListener('scroll', updateDots, { passive: true });
+
+            window.novedadesGoto = function (idx) {
+                track.scrollTo({ left: idx * getCardWidth(), behavior: 'smooth' });
+            };
+
+            window.novedadesScroll = function (dir) {
+                var idx = Math.round(track.scrollLeft / getCardWidth());
+                var next = Math.max(0, Math.min(dots.length - 1, idx + dir));
+                novedadesGoto(next);
+            };
+        })();
     </script>
 
 </body>
