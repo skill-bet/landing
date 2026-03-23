@@ -1263,7 +1263,7 @@ img {
 
 .airdrop-stats {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     background: var(--surface);
     border-radius: 14px;
     padding: 20px 24px;
