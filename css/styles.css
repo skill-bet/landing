@@ -1477,11 +1477,34 @@ img {
 }
 
 .memecoin-logo {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 32px rgba(0,200,120,0.35));
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
     animation: memeFloat 3.5s ease-in-out infinite;
+}
+
+.pf-brand-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pf-brand-name {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #FFB800;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    text-shadow: 0 2px 12px rgba(255,184,0,0.4);
+}
+
+.pf-brand-sub {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 @keyframes memeFloat {

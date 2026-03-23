@@ -336,41 +336,43 @@
                                     <stop offset="0%"   stop-color="#A06000"/>
                                     <stop offset="100%" stop-color="#5A3000"/>
                                 </radialGradient>
-                                <radialGradient id="pf-green" cx="32%" cy="25%" r="70%">
-                                    <stop offset="0%"   stop-color="#90EE90"/>
-                                    <stop offset="100%" stop-color="#2E8B2E"/>
-                                </radialGradient>
-                                <radialGradient id="pf-white" cx="65%" cy="25%" r="60%">
-                                    <stop offset="0%"   stop-color="#FFFFFF"/>
-                                    <stop offset="100%" stop-color="#BBBBBB"/>
-                                </radialGradient>
+                                <!-- Pill: horizontal gradient green|divider|white -->
+                                <linearGradient id="pf-pill" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%"    stop-color="#5DD85D"/>
+                                    <stop offset="47%"   stop-color="#28A228"/>
+                                    <stop offset="47%"   stop-color="#111"/>
+                                    <stop offset="53%"   stop-color="#111"/>
+                                    <stop offset="53%"   stop-color="#E8E8E8"/>
+                                    <stop offset="100%"  stop-color="#BBBBBB"/>
+                                </linearGradient>
                                 <filter id="pf-drop" x="-25%" y="-25%" width="150%" height="150%">
                                     <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
                                 </filter>
-                                <clipPath id="pf-lh"><rect x="0"   y="0" width="100" height="200"/></clipPath>
-                                <clipPath id="pf-rh"><rect x="100" y="0" width="100" height="200"/></clipPath>
                             </defs>
-                            <!-- 3-D coin depth (offset shadow) -->
+                            <!-- 3-D coin depth -->
                             <circle cx="105" cy="108" r="88" fill="url(#pf-edge)"/>
                             <!-- Coin face -->
                             <circle cx="100" cy="100" r="88" fill="url(#pf-gold)" filter="url(#pf-drop)"/>
                             <!-- Inner groove -->
-                            <circle cx="100" cy="100" r="81" fill="none" stroke="rgba(160,90,0,0.45)" stroke-width="2.5"/>
+                            <circle cx="100" cy="100" r="81" fill="none" stroke="rgba(160,90,0,0.4)" stroke-width="2.5"/>
                             <!-- PUMP.FUN text -->
-                            <text x="100" y="54" font-family="'Arial Black',Arial,sans-serif" font-size="16" font-weight="900" fill="#1A0800" text-anchor="middle" letter-spacing="2">PUMP.FUN</text>
-                            <!-- Pill shadow/outline -->
-                            <rect x="40" y="98" width="120" height="58" rx="29" fill="#1A0800"/>
-                            <!-- Pill green left half -->
-                            <rect x="42" y="100" width="116" height="54" rx="27" fill="url(#pf-green)" clip-path="url(#pf-lh)"/>
-                            <!-- Pill white right half -->
-                            <rect x="42" y="100" width="116" height="54" rx="27" fill="url(#pf-white)" clip-path="url(#pf-rh)"/>
-                            <!-- Centre divider -->
-                            <rect x="97" y="100" width="6" height="54" fill="#1A0800"/>
-                            <!-- Pill shine -->
-                            <ellipse cx="74" cy="112" rx="22" ry="8" fill="rgba(255,255,255,0.42)" transform="rotate(-20,74,112)"/>
+                            <text x="100" y="56" font-family="'Arial Black',Arial,sans-serif" font-size="16" font-weight="900" fill="#1A0800" text-anchor="middle" letter-spacing="2">PUMP.FUN</text>
+                            <!-- Pill group: rotated -12deg around coin center -->
+                            <g transform="rotate(-12, 100, 118)">
+                                <!-- Pill outline/shadow -->
+                                <rect x="22" y="96" width="156" height="44" rx="22" fill="#111"/>
+                                <!-- Pill fill (green | divider | white via gradient) -->
+                                <rect x="24" y="98" width="152" height="40" rx="20" fill="url(#pf-pill)"/>
+                                <!-- Pill shine top-left -->
+                                <ellipse cx="68" cy="107" rx="26" ry="7" fill="rgba(255,255,255,0.45)" transform="rotate(-5,68,107)"/>
+                            </g>
                             <!-- Coin top shine -->
                             <ellipse cx="72" cy="66" rx="30" ry="11" fill="rgba(255,255,255,0.25)" transform="rotate(-18,72,66)"/>
                         </svg>
+                        <div class="pf-brand-label">
+                            <span class="pf-brand-name">pump.fun</span>
+                            <span class="pf-brand-sub">Meme Coin</span>
+                        </div>
                     </div>
                     <p class="novedad-eyebrow memecoin-eyebrow">🔥 Pump.fun · Meme Coin</p>
                     <h3 class="novedad-title">$SBET llega a Pump.fun</h3>
