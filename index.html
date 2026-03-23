@@ -285,6 +285,18 @@
                         </div>
                     </div>
 
+                    <!-- Spots progress bar -->
+                    <div class="airdrop-spots">
+                        <div class="airdrop-spots-header">
+                            <span class="airdrop-spots-label" data-i18n="airdrop_spots_label">Plazas disponibles</span>
+                            <span class="airdrop-spots-count"><strong>1,258</strong> / 5,000</span>
+                        </div>
+                        <div class="airdrop-progress-track">
+                            <div class="airdrop-progress-fill" style="width: 25.16%"></div>
+                        </div>
+                        <p class="airdrop-spots-urgency" data-i18n="airdrop_spots_urgency">⚡ ¡Solo quedan 3,742 plazas! El airdrop cierra al completarse.</p>
+                    </div>
+
                     <div class="airdrop-tasks">
                         <div class="airdrop-task">
                             <div class="airdrop-task-icon">📱</div>
@@ -631,18 +643,83 @@
             <div class="stats-grid">
 
                 <div class="stat-item fade-in">
-                    <span class="stat-number">10K+</span>
+                    <span class="stat-number" data-count="10000" data-suffix="K+">10K+</span>
                     <span class="stat-label" data-i18n="stat_users">Usuarios activos</span>
                 </div>
 
                 <div class="stat-item fade-in">
-                    <span class="stat-number">50K+</span>
+                    <span class="stat-number" data-count="50000" data-suffix="K+">50K+</span>
                     <span class="stat-label" data-i18n="stat_matches">Partidos predichos</span>
                 </div>
 
                 <div class="stat-item fade-in">
-                    <span class="stat-number">2.5K+</span>
+                    <span class="stat-number" data-count="2500" data-suffix="K+">2.5K+</span>
                     <span class="stat-label" data-i18n="stat_leagues">Ligas creadas</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════════════ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow fade-in" data-i18n="faq_eyebrow">FAQ</p>
+                <h2 class="section-title fade-in" data-i18n="faq_title">Preguntas frecuentes</h2>
+            </div>
+            <div class="faq-list fade-in" id="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span data-i18n="faq_q1">¿Es gratis descargar SkillBet?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a1">Sí, totalmente gratis. SkillBet no usa dinero real en ningún momento. Compites con SkillTokens virtuales que se obtienen al registrarte y completando retos dentro de la app.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span data-i18n="faq_q2">¿Qué es un SkillToken?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a2">Los SkillTokens ($SKILLBET) son la moneda virtual de SkillBet. Se usan para hacer predicciones, competir en ligas y escalar en los rankings. Los tokens ganados en el airdrop podrán canjearse una vez listemos en exchange.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span data-i18n="faq_q3">¿Cómo funciona el airdrop?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">Descarga la app, crea tu cuenta y conecta tu wallet para participar. Por cada acción completas —descarga, registro, invitar amigos— recibes SkillTokens gratis. Las plazas son limitadas a 5,000 participantes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span data-i18n="faq_q4">¿Cuándo sale $SKILLBET en un exchange?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a4">El token $SBET llegará primero a Pump.fun en Abril 2026, seguido de su listing en Binance Smart Chain (BNB). Inscríbete al lanzamiento para recibir notificación el día exacto.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span data-i18n="faq_q5">¿Necesito experiencia en crypto para participar?</span>
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a5">No. Puedes usar SkillBet y ganar tokens sin saber nada de crypto. Para conectar tu wallet y participar en el airdrop sí necesitarás una wallet como MetaMask o Trust Wallet, pero es un proceso sencillo de 2 minutos.</p>
+                    </div>
                 </div>
 
             </div>
@@ -860,6 +937,22 @@
                 footer_support:         'Soporte',
                 footer_copyright:       '&copy; 2026 SkillBet. Todos los derechos reservados.',
                 footer_disclaimer:      'SkillBet es una aplicación de entretenimiento. No involucra dinero real ni apuestas con valor monetario.',
+                // Airdrop spots
+                airdrop_spots_label:    'Plazas disponibles',
+                airdrop_spots_urgency:  '⚡ ¡Solo quedan 3,742 plazas! El airdrop cierra al completarse.',
+                // FAQ
+                faq_eyebrow:            'FAQ',
+                faq_title:              'Preguntas frecuentes',
+                faq_q1: '¿Es gratis descargar SkillBet?',
+                faq_a1: 'Sí, totalmente gratis. SkillBet no usa dinero real en ningún momento. Compites con SkillTokens virtuales que se obtienen al registrarte y completando retos dentro de la app.',
+                faq_q2: '¿Qué es un SkillToken?',
+                faq_a2: 'Los SkillTokens ($SKILLBET) son la moneda virtual de SkillBet. Se usan para hacer predicciones, competir en ligas y escalar en los rankings. Los tokens ganados en el airdrop podrán canjearse una vez listemos en exchange.',
+                faq_q3: '¿Cómo funciona el airdrop?',
+                faq_a3: 'Descarga la app, crea tu cuenta y conecta tu wallet para participar. Por cada acción completada —descarga, registro, invitar amigos— recibes SkillTokens gratis. Las plazas son limitadas a 5,000 participantes.',
+                faq_q4: '¿Cuándo sale $SKILLBET en un exchange?',
+                faq_a4: 'El token $SBET llegará primero a Pump.fun en Abril 2026, seguido de su listing en Binance Smart Chain (BNB). Inscríbete al lanzamiento para recibir notificación el día exacto.',
+                faq_q5: '¿Necesito experiencia en crypto para participar?',
+                faq_a5: 'No. Puedes usar SkillBet y ganar tokens sin saber nada de crypto. Para conectar tu wallet y participar en el airdrop sí necesitarás una wallet como MetaMask o Trust Wallet, pero es un proceso sencillo de 2 minutos.',
                 // Meme coin card
                 meme_eyebrow:           '🔥 Pump.fun · Meme Coin',
                 meme_title:             '$SBET llega a Pump.fun',
@@ -1008,6 +1101,22 @@
                 footer_support:         'Support',
                 footer_copyright:       '&copy; 2026 SkillBet. All rights reserved.',
                 footer_disclaimer:      'SkillBet is an entertainment application. It does not involve real money or monetary-value bets.',
+                // Airdrop spots
+                airdrop_spots_label:    'Available spots',
+                airdrop_spots_urgency:  '⚡ Only 3,742 spots left! Airdrop closes when full.',
+                // FAQ
+                faq_eyebrow:            'FAQ',
+                faq_title:              'Frequently asked questions',
+                faq_q1: 'Is SkillBet free to download?',
+                faq_a1: 'Yes, completely free. SkillBet never uses real money. You compete with virtual SkillTokens earned when you sign up and by completing challenges inside the app.',
+                faq_q2: 'What is a SkillToken?',
+                faq_a2: 'SkillTokens ($SKILLBET) are SkillBet\'s virtual currency. They\'re used to make predictions, compete in leagues and climb the rankings. Tokens earned in the airdrop will be redeemable once we list on an exchange.',
+                faq_q3: 'How does the airdrop work?',
+                faq_a3: 'Download the app, create your account and connect your wallet to participate. For each completed action — download, sign-up, inviting friends — you receive free SkillTokens. Spots are limited to 5,000 participants.',
+                faq_q4: 'When does $SKILLBET list on an exchange?',
+                faq_a4: 'The $SBET token will launch first on Pump.fun in April 2026, followed by a listing on Binance Smart Chain (BNB). Sign up for launch notifications to get notified on the exact day.',
+                faq_q5: 'Do I need crypto experience to participate?',
+                faq_a5: 'No. You can use SkillBet and earn tokens without any crypto knowledge. To connect your wallet and join the airdrop you\'ll need a wallet like MetaMask or Trust Wallet — it\'s a simple 2-minute setup.',
                 // Meme coin card
                 meme_eyebrow:           '🔥 Pump.fun · Meme Coin',
                 meme_title:             '$SBET arrives on Pump.fun',
@@ -1217,6 +1326,58 @@
                 novedadesGoto(next);
             };
         })();
+
+        /* ── Animated stats counter ── */
+        (function () {
+            var counters = document.querySelectorAll('.stat-number[data-count]');
+            if (!counters.length) return;
+            var animated = false;
+            function formatNum(n, suffix) {
+                if (suffix === 'K+') {
+                    var k = n / 1000;
+                    return (k % 1 === 0 ? k : k.toFixed(1)) + 'K+';
+                }
+                return n.toLocaleString() + (suffix || '');
+            }
+            function animateCounter(el) {
+                var target = parseInt(el.getAttribute('data-count'), 10);
+                var suffix = el.getAttribute('data-suffix') || '';
+                var duration = 1800;
+                var start = null;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var progress = Math.min((ts - start) / duration, 1);
+                    var ease = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = formatNum(Math.floor(ease * target), suffix);
+                    if (progress < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting && !animated) {
+                        animated = true;
+                        counters.forEach(animateCounter);
+                        obs.disconnect();
+                    }
+                });
+            }, { threshold: 0.4 });
+            obs.observe(counters[0].closest('.stats-grid') || counters[0]);
+        })();
+
+        /* ── FAQ accordion ── */
+        window.toggleFaq = function (btn) {
+            var item = btn.closest('.faq-item');
+            var isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(function (el) {
+                el.classList.remove('open');
+                el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        };
     </script>
 
 </body>

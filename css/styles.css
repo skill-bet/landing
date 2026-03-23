@@ -1456,6 +1456,130 @@ img {
     50%       { transform: translateY(-8px); }
 }
 
+/* ── Airdrop spots progress bar ── */
+.airdrop-spots {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.airdrop-spots-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.airdrop-spots-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 11px;
+}
+
+.airdrop-spots-count {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.airdrop-spots-count strong {
+    color: var(--primary);
+}
+
+.airdrop-progress-track {
+    height: 8px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.airdrop-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 99px;
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.airdrop-spots-urgency {
+    font-size: 12px;
+    color: rgba(255,107,0,0.85);
+    margin-top: 2px;
+}
+
+/* ── FAQ section ── */
+.faq-section {
+    padding: var(--section-pad) 0;
+    background: var(--surface);
+}
+
+.faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 4px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: var(--primary);
+}
+
+.faq-chevron {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--text-muted);
+    transition: transform 0.25s, color 0.2s;
+}
+
+.faq-item.open .faq-chevron {
+    transform: rotate(180deg);
+    color: var(--primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.25s;
+    padding: 0 4px;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    padding-bottom: 20px;
+}
+
+.faq-answer p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 /* ── Meme Coin card ── */
 .novedad-memecoin {
     border-color: rgba(0, 200, 120, 0.2);
