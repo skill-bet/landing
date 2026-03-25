@@ -2082,3 +2082,105 @@ img {
         margin: 0 auto;
     }
 }
+
+/* ── Floating mobile CTA ─────────────────────────────── */
+.fab-cta {
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    z-index: 190;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fab-cta.fab-visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 28px;
+    border-radius: 50px;
+    white-space: nowrap;
+    box-shadow: 0 4px 24px rgba(255, 107, 0, 0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fab-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 32px rgba(255, 107, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+    .fab-cta {
+        display: block;
+    }
+}
+
+/* ── Social proof toasts ─────────────────────────────── */
+.toast-container {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.sb-toast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 12px 16px;
+    min-width: 240px;
+    max-width: 300px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s;
+}
+
+.sb-toast.toast-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.toast-body {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.toast-body strong {
+    color: var(--text-primary);
+}

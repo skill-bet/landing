@@ -939,6 +939,7 @@
                 store_apple_small:      'Descargar en',
                 store_apple_beta_note:  'Versión beta · Próximamente oficial',
                 store_google_beta_note: 'Versión beta · Próximamente en Play Store',
+                fab_cta:                '📩 Únete al airdrop',
                 store_google_small:     'Disponible en',
                 // Footer
                 footer_desc:            'Apuestas deportivas virtuales sin riesgo. Compite con habilidad, no con dinero.',
@@ -1105,6 +1106,7 @@
                 store_apple_small:      'Download on the',
                 store_apple_beta_note:  'Beta version · Official release coming soon',
                 store_google_beta_note: 'Beta version · Coming soon to Play Store',
+                fab_cta:                '📩 Join the airdrop',
                 store_google_small:     'Get it on',
                 // Footer
                 footer_desc:            'Risk-free virtual sports betting. Compete with skill, not money.',
@@ -1397,7 +1399,71 @@
                 btn.setAttribute('aria-expanded', 'true');
             }
         };
+
+        /* ── Scroll progress bar ── */
+        (function () {
+            var bar = document.getElementById('scroll-bar');
+            if (!bar) return;
+            window.addEventListener('scroll', function () {
+                var h = document.documentElement;
+                var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+                bar.style.width = Math.min(pct, 100) + '%';
+            }, { passive: true });
+        })();
+
+        /* ── Floating mobile CTA visibility ── */
+        (function () {
+            var fab = document.getElementById('fab-cta');
+            if (!fab) return;
+            window.addEventListener('scroll', function () {
+                fab.classList.toggle('fab-visible', window.scrollY > 400);
+            }, { passive: true });
+        })();
+
+        /* ── Social proof toasts ── */
+        (function () {
+            var names = ['Carlos','María','Alejandro','Lucía','Pablo','Sofía','Javier','Ana','Miguel','Elena','Diego','Laura'];
+            var cities = ['Madrid','Barcelona','Valencia','Sevilla','Bilbao','Málaga','Zaragoza','Lisboa','Ciudad de México','Buenos Aires'];
+            var actions = {
+                es: ['acaba de unirse al airdrop 🎉','se ha inscrito al lanzamiento 🚀','acaba de descargar la beta 📱'],
+                en: ['just joined the airdrop 🎉','just signed up for launch 🚀','just downloaded the beta 📱']
+            };
+            var container = document.getElementById('toast-container');
+            if (!container) return;
+            function rand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+            function showToast() {
+                var lang = localStorage.getItem('sb-lang') || 'es';
+                var name = rand(names);
+                var city = rand(cities);
+                var action = rand(actions[lang] || actions.es);
+                var toast = document.createElement('div');
+                toast.className = 'sb-toast';
+                toast.innerHTML = '<span class="toast-avatar">' + name[0] + '</span><div class="toast-body"><strong>' + name + '</strong> de ' + city + '<br><span>' + action + '</span></div>';
+                container.appendChild(toast);
+                setTimeout(function () { toast.classList.add('toast-show'); }, 50);
+                setTimeout(function () {
+                    toast.classList.remove('toast-show');
+                    setTimeout(function () { toast.remove(); }, 400);
+                }, 4000);
+            }
+            // First toast after 8s, then every 25-40s
+            setTimeout(function () {
+                showToast();
+                setInterval(showToast, 25000 + Math.random() * 15000);
+            }, 8000);
+        })();
     </script>
+
+    <!-- Scroll progress bar -->
+    <div id="scroll-bar" style="position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#FF6B00,#FF9A00);z-index:9999;pointer-events:none;transition:width 0.1s linear;"></div>
+
+    <!-- Floating mobile CTA -->
+    <div id="fab-cta" class="fab-cta">
+        <a href="https://ig.me/m/skillbet.es" target="_blank" rel="noopener" class="fab-btn" data-i18n="fab_cta">📩 Únete al airdrop</a>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container" class="toast-container"></div>
 
 </body>
 </html>
