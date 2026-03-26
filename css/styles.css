@@ -2184,3 +2184,134 @@ img {
 .toast-body strong {
     color: var(--text-primary);
 }
+
+/* ── Roadmap ─────────────────────────────────────────── */
+.roadmap-section {
+    padding: var(--section-pad) 0;
+    background: var(--background);
+}
+
+.roadmap-track {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+    padding-left: 28px;
+}
+
+/* Vertical line */
+.roadmap-track::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary) 0%, rgba(255,107,0,0.1) 100%);
+}
+
+.roadmap-item {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+.roadmap-item:last-child {
+    padding-bottom: 0;
+}
+
+.roadmap-dot {
+    position: absolute;
+    left: -28px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.roadmap-done .roadmap-dot {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.roadmap-active .roadmap-dot {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255,107,0,0.2);
+}
+
+.roadmap-pulse {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    animation: roadmapPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes roadmapPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.6); }
+}
+
+.roadmap-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.roadmap-date {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+}
+
+.roadmap-active .roadmap-date {
+    color: var(--primary);
+}
+
+.roadmap-item:not(.roadmap-done):not(.roadmap-active) .roadmap-date {
+    color: var(--text-muted);
+}
+
+.roadmap-title-item {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.roadmap-item:not(.roadmap-done):not(.roadmap-active) .roadmap-title-item {
+    color: var(--text-secondary);
+}
+
+.roadmap-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    max-width: 520px;
+}
+
+.roadmap-done .roadmap-desc,
+.roadmap-active .roadmap-desc {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .roadmap-track {
+        padding-left: 24px;
+    }
+    .roadmap-dot {
+        left: -24px;
+    }
+}
