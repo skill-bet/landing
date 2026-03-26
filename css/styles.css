@@ -1604,6 +1604,43 @@ img {
     line-height: 1.6;
 }
 
+/* ── Meme Coin banner ── */
+.memecoin-banner-wrap {
+    position: relative;
+    width: calc(100% + 80px);
+    margin: -40px -40px 0;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+    overflow: hidden;
+    min-height: 200px;
+    background: #050d18;
+}
+
+.memecoin-banner-img {
+    width: 100%;
+    display: block;
+    max-height: 280px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.memecoin-pf-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(0,238,102,0.35);
+    border-radius: 20px;
+    padding: 4px 10px 4px 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #00ee66;
+    letter-spacing: 0.03em;
+}
+
 /* ── Meme Coin card ── */
 .novedad-memecoin {
     border-color: rgba(0, 200, 120, 0.2);

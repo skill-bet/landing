@@ -349,60 +349,20 @@
 
                 <!-- Meme Coin -->
                 <div class="novedad-card novedad-memecoin fade-in">
-                    <div class="memecoin-logo-wrap">
-                        <!-- Pump.fun style: dark disc + neon green ring + vertical pill -->
-                        <svg class="memecoin-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Pump.fun">
-                            <defs>
-                                <!-- Vertical pill gradient: grey top / green bottom, hard split -->
-                                <linearGradient id="pill-vg" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%"   stop-color="#C8C8C8"/>
-                                    <stop offset="47%"  stop-color="#A0A0A0"/>
-                                    <stop offset="47%"  stop-color="#0a0a0a"/>
-                                    <stop offset="53%"  stop-color="#0a0a0a"/>
-                                    <stop offset="53%"  stop-color="#00CC55"/>
-                                    <stop offset="100%" stop-color="#00FF77"/>
-                                </linearGradient>
-                                <!-- Neon glow filter -->
-                                <filter id="neon" x="-40%" y="-40%" width="180%" height="180%">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
-                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                                </filter>
-                                <!-- Pill inner glow -->
-                                <filter id="pill-glow" x="-30%" y="-30%" width="160%" height="160%">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                                </filter>
-                                <!-- Radial dark bg -->
-                                <radialGradient id="disc-bg" cx="40%" cy="35%" r="65%">
-                                    <stop offset="0%"   stop-color="#0d2235"/>
-                                    <stop offset="100%" stop-color="#040d18"/>
-                                </radialGradient>
-                            </defs>
-                            <!-- Dark background disc -->
-                            <circle cx="100" cy="100" r="97" fill="#030b14"/>
-                            <!-- Outer neon ring glow -->
-                            <circle cx="100" cy="100" r="90" fill="none" stroke="#00ff77" stroke-width="14" opacity="0.25" filter="url(#neon)"/>
-                            <!-- Solid neon ring -->
-                            <circle cx="100" cy="100" r="89" fill="none" stroke="#00ee66" stroke-width="5"/>
-                            <!-- Inner ring subtle -->
-                            <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(0,220,100,0.18)" stroke-width="1.5"/>
-                            <!-- Inner disc -->
-                            <circle cx="100" cy="100" r="80" fill="url(#disc-bg)"/>
-                            <!-- Pill: vertical, tilted -30deg -->
-                            <g transform="rotate(-30, 100, 100)">
-                                <!-- Dark outline -->
-                                <rect x="74" y="38" width="52" height="124" rx="26" fill="#000"/>
-                                <!-- Pill face -->
-                                <rect x="76" y="40" width="48" height="120" rx="24" fill="url(#pill-vg)"/>
-                                <!-- Shine on grey half -->
-                                <ellipse cx="91" cy="68" rx="10" ry="22" fill="rgba(255,255,255,0.32)" transform="rotate(-8,91,68)"/>
-                                <!-- Green glow on bottom -->
-                                <rect x="76" y="100" width="48" height="60" rx="0" fill="rgba(0,255,100,0.12)" filter="url(#pill-glow)"/>
-                            </g>
-                        </svg>
-                        <div class="pf-brand-label">
-                            <span class="pf-brand-name">pump.fun</span>
-                            <span class="pf-brand-sub">Meme Coin</span>
+                    <div class="memecoin-banner-wrap">
+                        <img src="resources/sbet-meme-banner.png" alt="$SBET Meme Coin — SkillBet" class="memecoin-banner-img">
+                        <div class="memecoin-pf-badge">
+                            <!-- Pump.fun pill icon inline -->
+                            <svg viewBox="0 0 32 32" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="16" cy="16" r="15" fill="#060e1c"/>
+                                <circle cx="16" cy="16" r="14" fill="none" stroke="#00ee66" stroke-width="2"/>
+                                <g transform="rotate(-30,16,16)">
+                                    <rect x="11" y="6" width="10" height="20" rx="5" fill="#111"/>
+                                    <rect x="12" y="7" width="8" height="9" rx="4" fill="#aaa"/>
+                                    <rect x="12" y="16" width="8" height="9" rx="4" fill="#00cc55"/>
+                                </g>
+                            </svg>
+                            <span>pump.fun</span>
                         </div>
                     </div>
                     <p class="novedad-eyebrow memecoin-eyebrow" data-i18n="meme_eyebrow">🔥 Pump.fun · Meme Coin</p>
