@@ -2158,6 +2158,38 @@ img {
     }
 }
 
+/* ── Mobile social bar ───────────────────────────────────── */
+.mobile-social-bar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .mobile-social-bar {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding: 10px 16px;
+        background: var(--surface);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .mobile-social-bar a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+    }
+
+    .mobile-social-bar a:hover {
+        color: var(--primary);
+    }
+}
+
 @media (max-width: 600px) {
     .launch-bar {
         height: auto;
