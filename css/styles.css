@@ -1151,7 +1151,7 @@ img {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    align-items: flex-start;
+    align-items: stretch;
     padding-bottom: 4px;
 }
 
@@ -1523,6 +1523,25 @@ img {
 @keyframes launchChestFloat {
     0%, 100% { transform: translateY(0); }
     50%       { transform: translateY(-8px); }
+}
+
+.launch-bonus-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    background: rgba(255,107,0,0.06);
+    border: 1px solid rgba(255,107,0,0.15);
+    border-radius: 10px;
+    padding: 10px 14px;
+}
+
+.launch-bonus-text strong {
+    color: var(--primary);
+}
+
+/* Push last btn to bottom inside stretch card */
+.novedad-card > .btn:last-child {
+    margin-top: auto;
 }
 
 /* ── Airdrop spots progress bar ── */
