@@ -2162,38 +2162,40 @@ img {
     .launch-bar {
         height: auto;
         min-height: 40px;
-        padding: 5px 12px;
-        flex-wrap: wrap;
-        white-space: normal;
-        gap: 4px 10px;
-        justify-content: center;
+        padding: 5px 10px;
+        flex-wrap: nowrap;
+        gap: 6px;
+        justify-content: space-between;
+        overflow: hidden;
     }
 
     .launch-bar-text {
-        font-size: 12px;
-        white-space: nowrap;
+        display: none;
     }
 
     .launch-bar-countdown {
-        font-size: 12px;
+        font-size: 11px;
+        flex-shrink: 0;
     }
 
     .lb-unit {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .launch-bar-cta {
-        padding: 3px 12px;
+        padding: 3px 10px;
         font-size: 11px;
+        flex-shrink: 0;
     }
 
     .launch-bar-socials {
         display: flex;
-        order: 99;
-        width: 100%;
-        justify-content: center;
-        gap: 14px;
-        padding-top: 2px;
+        gap: 10px;
+    }
+
+    .lb-social svg {
+        width: 13px;
+        height: 13px;
     }
 
     .navbar {
