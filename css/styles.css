@@ -1513,7 +1513,9 @@ img {
     width: 100%;
     max-width: 260px;
     display: block;
-    margin: 0 auto;
+    margin: auto auto 0;
+    flex: 1 1 auto;
+    object-fit: contain;
     filter: drop-shadow(0 6px 28px rgba(255, 107, 0, 0.55));
     mask-image: radial-gradient(ellipse 78% 82% at 50% 50%, black 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse 78% 82% at 50% 50%, black 30%, transparent 75%);
