@@ -1220,7 +1220,6 @@ img {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: space-between;
     flex: 0 0 calc(50% - 12px);
     scroll-snap-align: start;
     min-width: 300px;
@@ -1513,8 +1512,8 @@ img {
     width: 100%;
     max-width: 260px;
     display: block;
-    margin: auto auto 0;
-    flex: 1 1 auto;
+    margin: 0 auto;
+    margin-top: auto;
     object-fit: contain;
     filter: drop-shadow(0 6px 28px rgba(255, 107, 0, 0.55));
     mask-image: radial-gradient(ellipse 78% 82% at 50% 50%, black 30%, transparent 75%);
