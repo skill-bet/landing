@@ -1813,6 +1813,33 @@ img {
 @media (max-width: 768px) {
     .novedad-card {
         flex: 0 0 82vw;
+        padding: 24px 20px;
+        gap: 12px;
+    }
+
+    .novedad-card-icon {
+        font-size: 26px;
+    }
+
+    .novedad-title {
+        font-size: 20px;
+    }
+
+    .novedad-subtitle {
+        font-size: 14px;
+    }
+
+    .countdown-item {
+        padding: 8px 6px;
+    }
+
+    .countdown-number {
+        font-size: 20px;
+    }
+
+    .launch-coins-img {
+        max-width: 160px;
+        margin: 4px auto;
     }
 
     .airdrop-tasks {
