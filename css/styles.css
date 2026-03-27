@@ -2188,7 +2188,12 @@ img {
     }
 
     .launch-bar-socials {
-        display: none;
+        display: flex;
+        order: 99;
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+        padding-top: 2px;
     }
 
     .navbar {
