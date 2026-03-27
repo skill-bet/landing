@@ -1220,6 +1220,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: space-between;
     flex: 0 0 calc(50% - 12px);
     scroll-snap-align: start;
     min-width: 300px;
@@ -1655,14 +1656,15 @@ img {
     margin: -40px -40px 0;
     border-radius: var(--radius-card) var(--radius-card) 0 0;
     overflow: hidden;
-    min-height: 200px;
+    min-height: 240px;
     background: #050d18;
+    flex-shrink: 0;
 }
 
 .memecoin-banner-img {
     width: 100%;
     display: block;
-    max-height: 280px;
+    height: 320px;
     object-fit: cover;
     object-position: center top;
 }
