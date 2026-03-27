@@ -154,14 +154,6 @@
                         <span class="launch-date-label" data-i18n="launch_date_label">Fecha de lanzamiento</span>
                         <span class="launch-date-value" data-i18n="launch_date_value">15 Mayo 2026</span>
                     </div>
-                    <button onclick="openReminderModal()" class="btn btn-outline" data-i18n="launch_remind_btn">Recuérdame el lanzamiento</button>
-                </div>
-
-                <!-- Countdown -->
-                <div class="novedad-card fade-in">
-                    <div class="novedad-card-icon">⏳</div>
-                    <p class="novedad-eyebrow" data-i18n="countdown_eyebrow">Cuenta atrás</p>
-                    <h3 class="novedad-title" data-i18n="countdown_card_title">¿Cuánto queda?</h3>
                     <div class="launch-countdown">
                         <div class="countdown-item">
                             <span class="countdown-number" id="cd-days">--</span>
@@ -184,6 +176,7 @@
                         </div>
                     </div>
                     <img class="launch-coins-img" src="resources/coins.png" alt="SkillBet Coins">
+                    <button onclick="openReminderModal()" class="btn btn-outline" data-i18n="launch_remind_btn">Recuérdame el lanzamiento</button>
                 </div>
 
                 <!-- Airdrop -->
@@ -407,7 +400,6 @@
                     <button class="nd-dot active" onclick="novedadesGoto(0)"></button>
                     <button class="nd-dot" onclick="novedadesGoto(1)"></button>
                     <button class="nd-dot" onclick="novedadesGoto(2)"></button>
-                    <button class="nd-dot" onclick="novedadesGoto(3)"></button>
                 </div>
                 <button class="nd-arrow nd-next" onclick="novedadesScroll(1)" aria-label="Siguiente">&#8250;</button>
             </div>
