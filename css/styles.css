@@ -310,6 +310,9 @@ img {
 }
 
 .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     padding: 4px 11px;
     border-radius: var(--radius-pill);
     font-size: 12px;
@@ -320,6 +323,11 @@ img {
     border: none;
     cursor: pointer;
     transition: background 0.18s ease, color 0.18s ease;
+    line-height: 1;
+}
+
+.lang-flag {
+    font-size: 14px;
     line-height: 1;
 }
 
