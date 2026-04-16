@@ -327,8 +327,11 @@ img {
 }
 
 .lang-flag {
-    font-size: 14px;
-    line-height: 1;
+    width: 18px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    vertical-align: middle;
 }
 
 .lang-btn:hover {
