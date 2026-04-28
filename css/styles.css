@@ -1882,6 +1882,57 @@ img {
     flex-shrink: 0;
 }
 
+/* ── Meme coin contract address box ─────────────────────── */
+.meme-ca-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,200,120,0.08);
+    border: 1px solid rgba(0,200,120,0.25);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin: 4px 0;
+    min-width: 0;
+}
+
+.meme-ca-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #00c878;
+    flex-shrink: 0;
+    text-transform: uppercase;
+}
+
+.meme-ca-address {
+    font-size: 11px;
+    font-family: 'Courier New', monospace;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+    transition: color 0.15s;
+}
+
+.meme-ca-address:hover {
+    color: #00c878;
+}
+
+.meme-ca-copy {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 2px;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: transform 0.15s;
+}
+.meme-ca-copy:hover { transform: scale(1.2); }
+
 .btn-memecoin {
     background: linear-gradient(135deg, #00c878, #00a860);
     color: #000;
