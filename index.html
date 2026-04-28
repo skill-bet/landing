@@ -46,6 +46,13 @@
 </head>
 <body>
 
+    <!-- ══ Meme coin launch TODAY alert ══ -->
+    <div class="meme-alert-bar" id="meme-alert-bar">
+        <span class="mab-pulse"></span>
+        <span class="mab-text" data-i18n="meme_alert_bar">🔥 ¡HOY es el día! <strong>$SBET llega a Pump.fun</strong> — ¡Estate muy atento! 👀</span>
+        <button class="mab-close" onclick="this.closest('.meme-alert-bar').style.display='none'" aria-label="Cerrar">✕</button>
+    </div>
+
     <!-- ══════════════════════════════════════════════
          Launch announcement bar
     ══════════════════════════════════════════════ -->
@@ -403,7 +410,7 @@
 
                     <div class="memecoin-launch-box">
                         <span class="memecoin-launch-label" data-i18n="meme_launch_label">Lanzamiento estimado</span>
-                        <span class="memecoin-launch-value" data-i18n="meme_launch_value">25 Abril 2026</span>
+                        <span class="memecoin-launch-value" data-i18n="meme_launch_value">28 Abril 2026</span>
                     </div>
 
                     <div class="memecoin-countdown launch-countdown">
@@ -495,7 +502,7 @@
                 <div class="roadmap-item roadmap-active">
                     <div class="roadmap-dot"><span class="roadmap-pulse"></span></div>
                     <div class="roadmap-content">
-                        <span class="roadmap-date" data-i18n="roadmap_date3">25 Abril 2026</span>
+                        <span class="roadmap-date" data-i18n="roadmap_date3">28 Abril 2026</span>
                         <h3 class="roadmap-title-item" data-i18n="roadmap_title3">$SBET en Pump.fun</h3>
                         <p class="roadmap-desc" data-i18n="roadmap_desc3">Lanzamiento del token en Pump.fun. Primer listing público con airdrop exclusivo para la comunidad.</p>
                     </div>
@@ -933,6 +940,7 @@
         var translations = {
             es: {
                 // Launch bar
+                meme_alert_bar:         '🔥 ¡HOY es el día! <strong>$SBET llega a Pump.fun</strong> — ¡Estate muy atento! 👀',
                 launch_bar_text:        '🚀 Lanzamiento oficial el <strong>15 de Mayo</strong> —',
                 launch_bar_cta:         'Inscríbete gratis',
                 // Navbar
@@ -1081,7 +1089,7 @@
                 roadmap_subtitle: 'De la beta al exchange. Cada hito nos acerca al lanzamiento definitivo.',
                 roadmap_date1: 'Marzo 2026',    roadmap_title1: 'Beta lanzada',           roadmap_desc1: 'App disponible en iOS (TestFlight) y Android (Expo). Primeros usuarios probando la plataforma.',
                 roadmap_date2: 'Abril 2026',   roadmap_title2: 'Airdrop de la Comunidad', roadmap_desc2: 'Airdrop exclusivo para early adopters. 5.000 plazas disponibles. Envíanos un DM en Instagram para participar.',
-                roadmap_date3: '25 Abril 2026',    roadmap_title3: '$SBET en Pump.fun',       roadmap_desc3: 'Lanzamiento del token en Pump.fun. Primer listing público con airdrop exclusivo para la comunidad.',
+                roadmap_date3: '28 Abril 2026',    roadmap_title3: '$SBET en Pump.fun',       roadmap_desc3: 'Lanzamiento del token en Pump.fun. Primer listing público con airdrop exclusivo para la comunidad.',
                 roadmap_date4: 'Mayo 2026',     roadmap_title4: 'Lanzamiento Oficial',     roadmap_desc4: 'SkillBet disponible en App Store y Google Play oficiales. Acceso para todos los usuarios.',
                 roadmap_date5: 'Q3 2026',       roadmap_title5: 'Listing BNB Chain',       roadmap_desc5: '$SKILLBET disponible en Binance Smart Chain con liquidez en DEX. El token entra en el mercado cripto real.',
                 roadmap_date6: 'Q4 2026',       roadmap_title6: 'Exchange Mayor',          roadmap_desc6: 'Objetivo de listing en exchange centralizado de primer nivel. Expansión internacional de la plataforma.',
@@ -1098,7 +1106,7 @@
                 faq_q3: '¿Cómo funciona el airdrop?',
                 faq_a3: 'Descarga la app, crea tu cuenta y conecta tu wallet para participar. Por cada acción completada —descarga, registro, invitar amigos— recibes SkillTokens gratis. Las plazas son limitadas a 5,000 participantes.',
                 faq_q4: '¿Cuándo sale $SKILLBET en un exchange?',
-                faq_a4: 'El token $SBET llegará primero a Pump.fun el 25 de Abril de 2026, seguido de su listing en Binance Smart Chain (BNB). Inscríbete al lanzamiento para recibir notificación el día exacto.',
+                faq_a4: 'El token $SBET llegará primero a Pump.fun el 28 de Abril de 2026, seguido de su listing en Binance Smart Chain (BNB). Inscríbete al lanzamiento para recibir notificación el día exacto.',
                 faq_q5: '¿Necesito experiencia en crypto para participar?',
                 faq_a5: 'No. Puedes usar SkillBet y ganar tokens sin saber nada de crypto. Para conectar tu wallet y participar en el airdrop sí necesitarás una wallet como MetaMask o Trust Wallet, pero es un proceso sencillo de 2 minutos.',
                 // Meme coin card
@@ -1106,7 +1114,7 @@
                 meme_title:             '$SBET llega a Pump.fun',
                 meme_subtitle:          'La meme coin oficial del ecosistema SkillBet. Lanzamiento con airdrop exclusivo para la comunidad.',
                 meme_launch_label:      'Lanzamiento estimado',
-                meme_launch_value:      '25 Abril 2026',
+                meme_launch_value:      '28 Abril 2026',
                 meme_feat1:             'Airdrop exclusivo para la comunidad SkillBet',
                 meme_feat2:             'Listing en Pump.fun desde el primer día',
                 meme_feat3:             'Bonus especial para early holders',
@@ -1124,6 +1132,7 @@
             },
             en: {
                 // Launch bar
+                meme_alert_bar:         '🔥 TODAY is the day! <strong>$SBET launches on Pump.fun</strong> — Stay tuned! 👀',
                 launch_bar_text:        '🚀 Official launch on <strong>May 15th</strong> —',
                 launch_bar_cta:         'Sign up free',
                 // Navbar
@@ -1272,7 +1281,7 @@
                 roadmap_subtitle: 'From beta to exchange. Every milestone brings us closer to the full launch.',
                 roadmap_date1: 'March 2026',  roadmap_title1: 'Beta launched',          roadmap_desc1: 'App available on iOS (TestFlight) and Android (Expo). First users testing the platform.',
                 roadmap_date2: 'April 2026',   roadmap_title2: 'Community Airdrop',      roadmap_desc2: 'Exclusive airdrop for early adopters. 5,000 spots available. DM us on Instagram to participate.',
-                roadmap_date3: 'April 25, 2026',  roadmap_title3: '$SBET on Pump.fun',      roadmap_desc3: 'Token launch on Pump.fun. First public listing with an exclusive airdrop for the community.',
+                roadmap_date3: 'April 28, 2026',  roadmap_title3: '$SBET on Pump.fun',      roadmap_desc3: 'Token launch on Pump.fun. First public listing with an exclusive airdrop for the community.',
                 roadmap_date4: 'May 2026',    roadmap_title4: 'Official Launch',         roadmap_desc4: 'SkillBet available on the official App Store and Google Play. Open access for all users.',
                 roadmap_date5: 'Q3 2026',     roadmap_title5: 'BNB Chain Listing',      roadmap_desc5: '$SKILLBET available on Binance Smart Chain with DEX liquidity. The token enters the real crypto market.',
                 roadmap_date6: 'Q4 2026',     roadmap_title6: 'Major Exchange',         roadmap_desc6: 'Target listing on a top-tier centralized exchange. International expansion of the platform.',
@@ -1289,7 +1298,7 @@
                 faq_q3: 'How does the airdrop work?',
                 faq_a3: 'Download the app, create your account and connect your wallet to participate. For each completed action — download, sign-up, inviting friends — you receive free SkillTokens. Spots are limited to 5,000 participants.',
                 faq_q4: 'When does $SKILLBET list on an exchange?',
-                faq_a4: 'The $SBET token will launch first on Pump.fun on April 25, 2026, followed by a listing on Binance Smart Chain (BNB). Sign up for launch notifications to get notified on the exact day.',
+                faq_a4: 'The $SBET token will launch first on Pump.fun on April 28, 2026, followed by a listing on Binance Smart Chain (BNB). Sign up for launch notifications to get notified on the exact day.',
                 faq_q5: 'Do I need crypto experience to participate?',
                 faq_a5: 'No. You can use SkillBet and earn tokens without any crypto knowledge. To connect your wallet and join the airdrop you\'ll need a wallet like MetaMask or Trust Wallet — it\'s a simple 2-minute setup.',
                 // Meme coin card
@@ -1297,7 +1306,7 @@
                 meme_title:             '$SBET arrives on Pump.fun',
                 meme_subtitle:          'The official meme coin of the SkillBet ecosystem. Launching with an exclusive airdrop for the community.',
                 meme_launch_label:      'Estimated launch',
-                meme_launch_value:      'April 25, 2026',
+                meme_launch_value:      'April 28, 2026',
                 meme_feat1:             'Exclusive airdrop for SkillBet community',
                 meme_feat2:             'Listing on Pump.fun from day one',
                 meme_feat3:             'Special bonus for early holders',
@@ -1383,7 +1392,7 @@
 
         // ── Countdown to $SBET meme coin launch ──────────────────
         (function () {
-            var MEME_DATE = new Date('2026-04-25T00:00:00').getTime();
+            var MEME_DATE = new Date('2026-04-28T00:00:00').getTime();
             function pad(n) { return n < 10 ? '0' + n : n; }
             function set(id, val) { var el = document.getElementById(id); if (el) el.textContent = val; }
             function tick() {
