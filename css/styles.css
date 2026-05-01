@@ -143,69 +143,10 @@ img {
 .fade-in:nth-child(5) { transition-delay: 0.4s; }
 .fade-in:nth-child(6) { transition-delay: 0.5s; }
 
-/* ── Meme coin launch TODAY bar ─────────────────────────── */
-.meme-alert-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 220;
-    height: 36px;
-    background: linear-gradient(90deg, #00c878, #00ffaa, #00c878);
-    background-size: 200% 100%;
-    animation: mab-slide 4s linear infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #062b18;
-    white-space: nowrap;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-@keyframes mab-slide {
-    0%   { background-position: 0% 0%; }
-    100% { background-position: 200% 0%; }
-}
-
-.mab-pulse {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #062b18;
-    flex-shrink: 0;
-    animation: mab-pulse 1.4s ease-in-out infinite;
-}
-
-@keyframes mab-pulse {
-    0%   { box-shadow: 0 0 0 0 rgba(6,43,24,0.7); }
-    70%  { box-shadow: 0 0 0 8px rgba(6,43,24,0); }
-    100% { box-shadow: 0 0 0 0 rgba(6,43,24,0); }
-}
-
-.mab-text strong { font-weight: 800; }
-
-.mab-close {
-    position: absolute;
-    right: 14px;
-    background: transparent;
-    border: none;
-    color: #062b18;
-    font-size: 15px;
-    cursor: pointer;
-    opacity: 0.6;
-    line-height: 1;
-    padding: 2px 4px;
-}
-.mab-close:hover { opacity: 1; }
-
 /* ── Launch announcement bar ─────────────────────────────── */
 .launch-bar {
     position: fixed;
-    top: 36px;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 210;
@@ -300,7 +241,7 @@ img {
 /* ── Navigation ─────────────────────────────────────────── */
 .navbar {
     position: fixed;
-    top: 76px;
+    top: 40px;
     left: 0;
     right: 0;
     z-index: 200;
@@ -405,7 +346,7 @@ img {
 /* ── Hero ────────────────────────────────────────────────── */
 .hero {
     min-height: 100vh;
-    padding-top: 124px;
+    padding-top: 88px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2351,18 +2292,12 @@ img {
         height: 13px;
     }
 
-    .meme-alert-bar {
-        font-size: 11px;
-        gap: 6px;
-    }
-    .mab-close { right: 8px; }
-
     .navbar {
-        top: calc(36px + 66px);
+        top: 66px;
     }
 
     .hero {
-        padding-top: calc(36px + 66px + 48px);
+        padding-top: calc(66px + 48px);
     }
 }
 
